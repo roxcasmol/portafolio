@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://roxcasmol.github.io/portafolio/sitemap.xml <!-- URL de tu portafolio en GitHub Pages -->
