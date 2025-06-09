@@ -343,10 +343,9 @@ section.bg-light {
 #habilidades .card {
     border: none;
     border-radius: 8px;
-    overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
+    height: auto;
 }
 
 #habilidades .card:hover {
@@ -373,11 +372,13 @@ section.bg-light {
 #habilidades ul.list-unstyled li {
     background-color: var(--light-bg-color);
     color: var(--text-color);
-    padding: 8px 15px;
+    padding: 12px 25px; /* Aumentado el padding para más espacio */
     margin: 5px;
     border-radius: 5px;
-    font-size: 0.95rem;
-    white-space: nowrap; /* Evita que el texto se rompa */
+    font-size: 1rem; /* Incrementado el tamaño de la fuente */
+    line-height: 1.4; /* Añadida altura de línea para mejor espaciado */
+    text-align: center; /* Asegura que el texto esté centrado dentro del badge */
+    white-space: normal; /* Asegura que el texto se envuelva */
 }
 
 /* Sección Contacto */
@@ -539,4 +540,39 @@ footer a:hover {
     #habilidades .card-title {
         font-size: 1.4rem;
     }
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366; /* Color de WhatsApp */
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 28px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none !important; /* Asegura que el enlace no tenga subrayado */
+}
+
+.whatsapp-float:hover {
+    background-color: #1da851; /* Un tono más oscuro al pasar el ratón */
+    transform: translateY(-5px);
+}
+
+.whatsapp-float i {
+    color: white !important;
+    font-size: 28px !important;
+    text-shadow: none !important;
+    font-family: "Font Awesome 6 Brands" !important;
+    line-height: 1;
+    text-decoration: none !important; /* Elimina el subrayado en el icono directamente */
 }

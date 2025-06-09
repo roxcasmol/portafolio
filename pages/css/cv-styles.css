@@ -1,0 +1,149 @@
+/* Estilos generales para el CV */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    line-height: 1.7;
+}
+
+.navbar {
+    transition: all 0.5s ease-in-out; /* Transición más suave para el efecto de scroll */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: transparent !important; /* Navbar transparente por defecto */
+    z-index: 999; /* Asegura que el navbar esté por encima de otros elementos */
+    border-bottom: none; /* Eliminar borde inferior si lo había */
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8) !important; /* Fondo semi-transparente cuando el navbar hace scroll */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #ffffff !important; /* Color blanco */
+    transition: color 0.3s ease;
+    text-shadow: none; /* Asegurar que no haya sombra de texto */
+}
+
+.navbar-brand:hover {
+    color: #00bcd4 !important; /* Color de acento al hover */
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important; /* Texto más visible */
+    font-weight: 600;
+    position: relative;
+    padding: 10px 15px; /* Más padding para los enlaces */
+    transition: color 0.3s ease;
+    text-shadow: none; /* Asegurar que no haya sombra de texto */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #149ddd !important; /* Color primario al hover/activo */
+    text-shadow: none; /* Asegurar que no haya sombra de texto */
+}
+
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 15px; /* Ajusta la posición de la línea */
+    bottom: 5px; /* Ajusta la posición de la línea */
+    width: calc(100% - 30px); /* Ancho de la línea */
+    height: 2px;
+    background-color: #149ddd; /* Color primario */
+    transition: width 0.3s ease;
+}
+
+main {
+    padding-top: 80px; /* Ajustado para la navegación fija */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif; /* Usar Raleway para los títulos (como en styles.css) */
+    color: #e0e0e0; /* Restaurar color claro para títulos */
+    text-shadow: none; /* Eliminar sombra de texto */
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    background-color: #1a1a1a; /* Restaurar fondo oscuro para tarjetas */
+    border: 1px solid #333;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-title {
+    color: #e0e0e0; /* Restaurar color claro para títulos de tarjetas */
+    text-shadow: none;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: #FFFFFF !important;
+}
+
+/* Estilos para el texto de los párrafos en las tarjetas */
+.card-body p {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+}
+
+/* Estilos para el texto de las listas */
+.card-body ul li {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+}
+
+.card-body ul li strong {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+}
+
+/* Estilos para las barras de progreso */
+.progress {
+    height: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    background-color: #149ddd;
+    border-radius: 10px;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #1a1a1a !important;
+    border-top: 1px solid #333;
+    color: #e0e0e0;
+}
+
+.social-links a {
+    color: #e0e0e0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #149ddd;
+    transform: translateY(-3px);
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1.5rem;
+    }
+} 
