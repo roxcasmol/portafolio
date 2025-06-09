@@ -125,27 +125,23 @@ h1, h2, h3, h4, h5, h6 {
 .circular-carousel-container {
     position: relative;
     width: 100%;
-    height: 750px; /* Altura del contenedor del carrusel, más espacio */
+    height: 750px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: #05051a; /* Fondo ultra oscuro */
-    perspective: 1200px; /* Mayor perspectiva para mejor 3D */
-    border-bottom: 3px solid rgba(0, 200, 255, 0.5); /* Borde cian más pronunciado */
+    background-color: #05051a;
+    perspective: 1200px;
+    border-bottom: 3px solid rgba(0, 200, 255, 0.5);
 }
 
 .carousel-wrapper {
     position: absolute;
-    width: 700px; /* Ancho base del wrapper para escritorio, más grande */
-    height: 700px; /* Asegura que el wrapper sea cuadrado */
+    width: 700px;
+    height: 700px;
     transform-style: preserve-3d;
-    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Curva de animación más suave */
-    animation: rotateCarousel 40s infinite linear; /* Rotación más lenta */
-}
-
-.carousel-wrapper:hover {
-    animation-play-state: paused;
+    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: rotateCarousel 40s infinite linear;
 }
 
 .carousel-item-custom {
@@ -159,35 +155,35 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
     backface-visibility: hidden;
-    transition: transform 0.8s ease, opacity 0.8s ease; /* Transición más larga */
+    transition: transform 0.8s ease, opacity 0.8s ease;
 }
 
 .carousel-item-custom img {
-    width: 200px; /* Tamaño de la imagen para escritorio, AUMENTADO */
+    width: 200px;
     height: 200px;
     object-fit: cover;
-    border-radius: 15px; /* Bordes más redondeados */
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7), 0 0 20px rgba(164, 63, 255, 0.5); /* Sombra con toque púrpura */
-    border: 4px solid rgba(164, 63, 255, 0.6); /* Borde púrpura más grueso */
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7), 0 0 20px rgba(164, 63, 255, 0.5);
+    border: 4px solid rgba(164, 63, 255, 0.6);
     transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
 .carousel-item-custom .caption {
     position: absolute;
-    bottom: -150px; /* Inicialmente fuera de vista, ajustado */
+    bottom: -150px;
     left: 50%;
     transform: translateX(-50%);
-    width: 370px; /* Ancho fijo para el caption (imagen 200px + 30px) */
+    width: 370px;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.9); /* Fondo más opaco para el caption */
+    background-color: rgba(0, 0, 0, 0.9);
     color: #e0e0e0;
     text-align: center;
     border-radius: 10px;
     opacity: 0;
-    transition: bottom 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67), opacity 0.4s ease; /* Transición personalizada */
+    transition: bottom 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67), opacity 0.4s ease;
     pointer-events: none;
-    border: 2px solid rgba(0, 200, 255, 0.4); /* Borde cian */
-    box-shadow: 0 0 15px rgba(0, 200, 255, 0.5); /* Sombra de neón para el caption */
+    border: 2px solid rgba(0, 200, 255, 0.4);
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.5);
 }
 
 .carousel-item-custom .caption h5 {
@@ -372,43 +368,39 @@ footer a:hover {
 
 @media (max-width: 768px) {
     .landing-hero-section {
+        height: 500px;
+        padding-top: 56px;
+    }
+    .landing-hero-section h1 {
+        font-size: 4rem;
+    }
+    .landing-hero-section p {
+        font-size: 1.8rem;
+    }
+    .circular-carousel-container {
+        height: 500px;
+    }
+    .carousel-wrapper {
+        width: 400px;
         height: 400px;
     }
-
-    .landing-hero-section h1 {
-        font-size: 3rem;
-    }
-
-    .landing-hero-section p {
-        font-size: 1.6rem;
-    }
-
-    .circular-carousel-container {
-        height: 550px;
-    }
-
-    .carousel-wrapper {
-        width: 550px;
-        height: 550px;
-    }
-
     .carousel-item-custom img {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
     }
-
     .carousel-item-custom .caption {
+        width: 200px;
+        bottom: -120px;
         padding: 10px;
-        width: 180px; /* Ancho fijo para el caption (imagen 150px + 30px) */
     }
     .carousel-item-custom .caption h5 {
         font-size: 1.1rem;
+        margin-bottom: 5px;
     }
-
     .carousel-item-custom .caption p {
         font-size: 0.8rem;
+        margin-bottom: 0;
     }
-
     #services .service-block, #contact .form-control, #contact .btn-primary {
         padding: 25px;
     }
@@ -416,71 +408,98 @@ footer a:hover {
 
 @media (max-width: 576px) {
     .landing-hero-section {
-        height: 350px;
+        height: 450px;
     }
-
     .landing-hero-section h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
-
     .landing-hero-section p {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
-
     .circular-carousel-container {
-        height: 480px;
+        height: 400px;
     }
-
     .carousel-wrapper {
-        width: 480px;
-        height: 480px;
+        width: 300px;
+        height: 300px;
     }
-
     .carousel-item-custom img {
-        width: 120px; 
-        height: 120px;
+        width: 80px;
+        height: 80px;
     }
     .carousel-item-custom .caption {
-        padding: 10px;
-        width: 150px; /* Ancho fijo para el caption (imagen 120px + 30px) */
+        width: 160px;
+        bottom: -100px;
+        padding: 8px;
     }
     .carousel-item-custom .caption h5 {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        margin-bottom: 3px;
     }
     .carousel-item-custom .caption p {
         font-size: 0.7rem;
     }
-
     #services .service-block, #contact .form-control, #contact .btn-primary {
-        padding: 20px;
+        padding: 25px;
     }
 }
 
 @media (max-width: 400px) {
     .landing-hero-section {
-        height: 300px;
+        height: 400px;
     }
+    .landing-hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .landing-hero-section p {
+        font-size: 1.2rem;
+    }
+    .circular-carousel-container {
+        height: 350px;
+    }
+    .carousel-wrapper {
+        width: 250px;
+        height: 250px;
+    }
+    .carousel-item-custom img {
+        width: 60px;
+        height: 60px;
+    }
+    .carousel-item-custom .caption {
+        width: 140px;
+        bottom: -80px;
+        padding: 6px;
+    }
+    .carousel-item-custom .caption h5 {
+        font-size: 0.8rem;
+    }
+    .carousel-item-custom .caption p {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 320px) {
     .landing-hero-section h1 {
         font-size: 2rem;
     }
-
     .landing-hero-section p {
         font-size: 1rem;
     }
     .circular-carousel-container {
-        height: 400px;
+        height: 300px;
     }
-
     .carousel-wrapper {
-        width: 400px;
-        height: 400px;
+        width: 240px;
+        height: 240px;
     }
     .carousel-item-custom img {
-        width: 100px;
-        height: 100px;
+        width: 70px;
+        height: 70px;
     }
     .carousel-item-custom .caption {
-        width: 130px; /* Ancho fijo para el caption (imagen 100px + 30px) */
+        width: 130px;
+        bottom: 80px;
+        font-size: 0.7rem;
     }
 }
 

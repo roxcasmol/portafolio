@@ -167,8 +167,7 @@
     </footer>
 
     <!-- Bootstrap JS Bundle (popper incluido) -->
-    <!-- Removido para usar nuestro carrusel personalizado -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -176,21 +175,47 @@
             const carouselItems = document.querySelectorAll('.carousel-item-custom');
             const numItems = carouselItems.length;
             const angle = 360 / numItems;
-            const radius = 350; // Nuevo radio del círculo en píxeles, ajustado para imágenes más grandes
+            
+            // Función para calcular el radio basado en el ancho de la pantalla
+            function calculateRadius() {
+                const width = window.innerWidth;
+                if (width <= 400) return 150;
+                if (width <= 576) return 180;
+                if (width <= 768) return 220;
+                return 350;
+            }
 
-            // Posicionar cada elemento en el círculo
-            carouselItems.forEach((item, index) => {
-                const rotateY = index * angle;
-                item.style.transform = `rotateY(${rotateY}deg) translateZ(${radius}px)`;
-            });
+            // Función para posicionar los elementos
+            function positionItems() {
+                const radius = calculateRadius();
+                carouselItems.forEach((item, index) => {
+                    const rotateY = index * angle;
+                    item.style.transform = `rotateY(${rotateY}deg) translateZ(${radius}px)`;
+                });
+            }
 
-            // Controlar la animación de rotación al pasar el ratón
+            // Posicionar elementos inicialmente
+            positionItems();
+
+            // Reposicionar elementos cuando cambie el tamaño de la ventana
+            window.addEventListener('resize', positionItems);
+
+            // Controlar la animación de rotación
             if (carouselWrapper) {
                 carouselWrapper.addEventListener('mouseenter', () => {
                     carouselWrapper.style.animationPlayState = 'paused';
                 });
 
                 carouselWrapper.addEventListener('mouseleave', () => {
+                    carouselWrapper.style.animationPlayState = 'running';
+                });
+
+                // Pausar la animación en dispositivos táctiles
+                carouselWrapper.addEventListener('touchstart', () => {
+                    carouselWrapper.style.animationPlayState = 'paused';
+                });
+
+                carouselWrapper.addEventListener('touchend', () => {
                     carouselWrapper.style.animationPlayState = 'running';
                 });
             }
