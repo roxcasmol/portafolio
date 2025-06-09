@@ -2,8 +2,8 @@ body {
     font-family: 'Space Grotesk', sans-serif;
     line-height: 1.6;
     color: #e0e0e0; /* Color de texto claro para fondo oscuro */
-    margin-top: 0;
-    padding-top: 56px; /* Altura del navbar fijo */
+    margin-top: 0; /* Asegurarse de que no haya margin-top */
+    padding-top: 0; /* Asegurarse de que no haya padding-top */
     background-color: #05051a; /* Fondo ultra oscuro para el tema futurista */
 }
 
@@ -101,7 +101,8 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 56px;
+    margin-top: 0; /* Asegurar que no haya margin-top general */
+    padding-top: 0; /* Asegurar que no haya padding-top general */
     border-bottom: 3px solid rgba(164, 63, 255, 0.5); /* Borde inferior púrpura más pronunciado */
     position: relative;
     overflow: hidden; /* Para contener posibles animaciones de fondo */
@@ -169,8 +170,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carousel-item-custom .caption {
-    position: absolute;
-    bottom: -150px;
+    position: absolute;   
     left: 50%;
     transform: translateX(-50%);
     width: 370px;
@@ -179,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #e0e0e0;
     text-align: center;
     border-radius: 10px;
-    opacity: 0;
+    opacity: 0; /* Por defecto está oculto */
     transition: bottom 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67), opacity 0.4s ease;
     pointer-events: none;
     border: 2px solid rgba(0, 200, 255, 0.4);
@@ -208,7 +208,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .carousel-item-custom:hover .caption {
     bottom: 240px; /* POSICIÓN DEL CAPTION AJUSTADA: Más arriba, justo debajo de la imagen */
-    opacity: 1;
+    opacity: 1; /* Se vuelve visible */
 }
 
 /* Animación de rotación */
@@ -335,19 +335,16 @@ footer a:hover {
 
 /* Media Queries para responsividad general */
 @media (max-width: 992px) {
+  
     .landing-hero-section {
-        height: 500px;
-        padding-top: 100px;
+        height: 550px;
     }
-
     .landing-hero-section h1 {
         font-size: 4rem;
     }
-
     .landing-hero-section p {
         font-size: 2rem;
     }
-
     .circular-carousel-container {
         height: 650px;
     }
@@ -359,18 +356,29 @@ footer a:hover {
         width: 180px;
         height: 180px;
     }
+    .carousel-item-custom .caption {
+        width: 200px;
+        bottom: -150px;
+        padding: 10px;
+    }
     .carousel-item-custom .caption h5 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        margin-bottom: 5px;
     }
     .carousel-item-custom .caption p {
-        font-size: 0.95rem;
+        font-size: 0.8rem;
+        margin-bottom: 0;
+    }
+
+    .carousel-item-custom:hover .caption {
+        bottom: 200px;
     }
 }
 
 @media (max-width: 768px) {
+   
     .landing-hero-section {
-        height: 450px;
-        padding-top: 100px;
+        height: 500px;
     }
     .landing-hero-section h1 {
         font-size: 4rem;
@@ -405,12 +413,16 @@ footer a:hover {
     #services .service-block, #contact .form-control, #contact .btn-primary {
         padding: 25px;
     }
+
+    .carousel-item-custom:hover .caption {
+        bottom: 180px;
+    }
 }
 
 @media (max-width: 576px) {
+   
     .landing-hero-section {
-        height: 400px;
-        padding-top: 100px;
+        height: 450px;
     }
     .landing-hero-section h1 {
         font-size: 3rem;
@@ -431,7 +443,7 @@ footer a:hover {
     }
     .carousel-item-custom .caption {
         width: 160px;
-        bottom: -100px;
+        bottom: -250px;
         padding: 8px;
     }
     .carousel-item-custom .caption h5 {
@@ -444,12 +456,16 @@ footer a:hover {
     #services .service-block, #contact .form-control, #contact .btn-primary {
         padding: 25px;
     }
+
+    .carousel-item-custom:hover .caption {
+        bottom: 150px;
+    }
 }
 
 @media (max-width: 400px) {
+   
     .landing-hero-section {
-        height: 350px;
-        padding-top: 100px;
+        height: 400px;
     }
     .landing-hero-section h1 {
         font-size: 2.5rem;
@@ -479,30 +495,11 @@ footer a:hover {
     .carousel-item-custom .caption p {
         font-size: 0.65rem;
     }
+
+    .carousel-item-custom:hover .caption {
+        bottom: 100px;
+    }
 }
 
-@media (max-width: 320px) {
-    .landing-hero-section h1 {
-        font-size: 2rem;
-    }
-    .landing-hero-section p {
-        font-size: 1rem;
-    }
-    .circular-carousel-container {
-        height: 300px;
-    }
-    .carousel-wrapper {
-        width: 240px;
-        height: 240px;
-    }
-    .carousel-item-custom img {
-        width: 70px;
-        height: 70px;
-    }
-    .carousel-item-custom .caption {
-        width: 130px;
-        bottom: 80px;
-        font-size: 0.7rem;
-    }
-}
+
 
