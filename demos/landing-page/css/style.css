@@ -348,23 +348,35 @@ footer a:hover {
     }
 
     body {
-        padding-top: 300px; /* Ajuste para compensar navbar en móvil */
+        padding-top: 0; /* Eliminar el padding-top del body */
     }
     html {
-        scroll-padding-top: 300px;
+        scroll-padding-top: 56px; /* Ajustar a la altura del navbar colapsado */
     }
-}
 
-@media (max-width: 992px) {
-  
     .landing-hero-section {
-        height: 550px;
+        margin-top: 200px; /* Aplicar margin-top a la sección hero para compensar el navbar expandido */
+        height: 550px; /* Ajustar altura si es necesario */
     }
     .landing-hero-section h1 {
         font-size: 4rem;
     }
     .landing-hero-section p {
         font-size: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Restablecer las propiedades del body a su estado original o eliminar si ya no son necesarias */
+    body {
+        padding-top: 0;
+    }
+    html {
+        scroll-padding-top: 56px;
+    }
+    .landing-hero-section {
+        height: 600px;
+        margin-top: 0; /* Asegurar que no haya margin-top en resoluciones grandes */
     }
     .circular-carousel-container {
         height: 650px;
@@ -397,9 +409,15 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
-   
+    body {
+        padding-top: 0;
+    }
+    html {
+        scroll-padding-top: 56px;
+    }
     .landing-hero-section {
         height: 500px;
+        margin-top: 200px; /* Aplicar margin-top */
     }
     .landing-hero-section h1 {
         font-size: 4rem;
@@ -441,9 +459,15 @@ footer a:hover {
 }
 
 @media (max-width: 576px) {
-   
+    body {
+        padding-top: 0;
+    }
+    html {
+        scroll-padding-top: 56px;
+    }
     .landing-hero-section {
         height: 450px;
+        margin-top: 200px; /* Aplicar margin-top */
     }
     .landing-hero-section h1 {
         font-size: 3rem;
@@ -484,9 +508,15 @@ footer a:hover {
 }
 
 @media (max-width: 400px) {
-   
+    body {
+        padding-top: 0;
+    }
+    html {
+        scroll-padding-top: 56px;
+    }
     .landing-hero-section {
         height: 400px;
+        margin-top: 200px; /* Aplicar margin-top */
     }
     .landing-hero-section h1 {
         font-size: 2.5rem;
@@ -519,6 +549,51 @@ footer a:hover {
 
     .carousel-item-custom:hover .caption {
         bottom: 100px;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        padding-top: 0;
+    }
+    html {
+        scroll-padding-top: 56px;
+    }
+    .landing-hero-section {
+        height: 350px;
+        margin-top: 200px; /* Aplicar margin-top */
+    }
+    .landing-hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .landing-hero-section p {
+        font-size: 1.2rem;
+    }
+    .circular-carousel-container {
+        height: 300px;
+    }
+    .carousel-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+    .carousel-item-custom img {
+        width: 40px;
+        height: 40px;
+    }
+    .carousel-item-custom .caption {
+        width: 120px;
+        bottom: -60px;
+        padding: 4px;
+    }
+    .carousel-item-custom .caption h5 {
+        font-size: 0.7rem;
+    }
+    .carousel-item-custom .caption p {
+        font-size: 0.55rem;
+    }
+
+    .carousel-item-custom:hover .caption {
+        bottom: 80px;
     }
 }
 
