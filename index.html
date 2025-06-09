@@ -335,12 +335,15 @@
                         ¿Tienes un proyecto en mente o quieres saber más sobre mi trabajo? ¡No dudes en contactarme!
                     </p>
                     <form id="contactForm" onsubmit="return handleSubmit(event)">
-                        <!-- Asunto dinámico: "{name} quiere contactarte" -->
-                        <input type="hidden" name="_subject" value="{name} quiere contactarte" />
+                        <!-- Especifica la dirección de email de respuesta (el email del remitente) -->
+                        <input type="hidden" name="_replyto" id="replyToEmail" />
                         <!-- Desactiva reCAPTCHA de Google -->
                         <input type="hidden" name="_captcha" value="false" />
                         <!-- Honeypot para bots -->
-                        <input type="text" name="_honey" style="display:none" />
+                        <input type="hidden" name="_honey" style="display:none" />
+
+                        <!-- Asunto dinámico: "{name} quiere contactarte" -->
+                        <input type="hidden" name="_subject" value="{name} quiere contactarte" />
 
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label>
@@ -436,6 +439,19 @@
                     navbar.classList.remove('scrolled');
                 }
             });
+
+            // Cerrar el navbar colapsable al hacer clic en un enlace (para móviles)
+            const navLinks = document.querySelectorAll('#navbarNav .nav-link');
+            const navbarCollapse = document.getElementById('navbarNav');
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navbarCollapse.classList.contains('show')) {
+                        bsCollapse.hide();
+                    }
+                });
+            });
         });
 
         // Función para manejar el envío del formulario
@@ -446,6 +462,12 @@
             const submitButton = form.querySelector('button[type="submit"]');
             const successMessage = document.getElementById('successMessage');
             const errorMessage = document.getElementById('errorMessage');
+            
+            const emailInput = document.getElementById('email');
+            const replyToEmailInput = document.getElementById('replyToEmail');
+            if (emailInput && replyToEmailInput) {
+                replyToEmailInput.value = emailInput.value;
+            }
             
             // Deshabilitar el botón durante el envío
             submitButton.disabled = true;
