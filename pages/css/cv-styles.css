@@ -142,6 +142,20 @@ footer {
 }
 
 /* Media Queries para responsividad */
+@media (max-width: 991.98px) { /* Centra el menú en pantallas pequeñas (Bootstrap's lg breakpoint) */
+    .navbar-collapse {
+        justify-content: center;
+    }
+
+    .navbar-nav {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        text-align: center;
+    }
+}
+
 @media (max-width: 768px) {
     .card {
         margin-bottom: 1.5rem;

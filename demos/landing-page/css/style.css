@@ -334,6 +334,27 @@ footer a:hover {
 }
 
 /* Media Queries para responsividad general */
+@media (max-width: 991.98px) { /* Centra el menú en pantallas pequeñas (Bootstrap's lg breakpoint) */
+    .navbar-collapse {
+        justify-content: center;
+    }
+
+    .navbar-nav {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        text-align: center;
+    }
+
+    body {
+        padding-top: 300px; /* Ajuste para compensar navbar en móvil */
+    }
+    html {
+        scroll-padding-top: 300px;
+    }
+}
+
 @media (max-width: 992px) {
   
     .landing-hero-section {
