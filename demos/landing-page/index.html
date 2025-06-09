@@ -24,10 +24,10 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavLanding">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#home-landing">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                <ul class="navbar-nav justify-content-center">
+                    <li class="nav-item text-center"><a class="nav-link active" href="#home-landing">Inicio</a></li>
+                    <li class="nav-item text-center"><a class="nav-link" href="#services">Servicios</a></li>
+                    <li class="nav-item text-center"><a class="nav-link" href="#contact">Contacto</a></li>
                 </ul>
             </div>
         </div>
@@ -171,6 +171,33 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar todos los tooltips y popovers de Bootstrap
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl)
+            });
+
+            // Manejar el scroll del navbar
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Asegurar que el toggler del navbar funcione
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            
+            if (navbarToggler && navbarCollapse) {
+                navbarToggler.addEventListener('click', function() {
+                    navbarCollapse.classList.toggle('show');
+                });
+            }
+
+            // Código existente del carrusel
             const carouselWrapper = document.querySelector('.carousel-wrapper');
             const carouselItems = document.querySelectorAll('.carousel-item-custom');
             const numItems = carouselItems.length;
