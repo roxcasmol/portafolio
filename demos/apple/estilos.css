@@ -64,21 +64,16 @@ h3{
 
 img{
      width: 100%;
-     height: auto;
 }
 
 section{
      position: relative;
      width: 100%;
-     min-height: 100vh;
-     padding: 50px 0;
-     display: flex;
-     align-items: center;
+     height: 100vh;
 }
 
 .text-container{
     flex-direction: column; 
-    text-align: center;
 }
 
 .enlace-info{
@@ -99,15 +94,12 @@ section{
      grid-template-columns: repeat(12, 1fr);
      gap: 20px;
      height: 100%;
-     width: 90%;
-     margin: 0 auto;
 }
 
 .grid div{
      display: flex;
      justify-content: center;
      align-items: center;
-     flex-direction: column;
 }
 
 .span5{
@@ -130,99 +122,7 @@ section{
      grid-column: span 12;
 }
 
-/* Media Queries para Responsividad */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 36px;
-    }
-    h2 {
-        font-size: 20px;
-    }
-    h3 {
-        font-size: 18px;
-    }
-    .enlace-info {
-        font-size: 18px;
-    }
-    .grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        width: 95%;
-    }
-    .grid div {
-        grid-column: span 1 !important;
-    }
-    section {
-        min-height: auto;
-        padding: 80px 0;
-    }
-    header {
-        height: auto;
-        padding: 80px 0;
-    }
-    nav .enlaces {
-        justify-content: center;
-        flex-wrap: wrap;
-        height: auto;
-        padding: 10px 0;
-    }
-    nav .enlaces a {
-        font-size: 12px;
-        padding: 5px;
-    }
 
-    header .text-container,
-    header .img-container,
-    .service .contenedor,
-    .ipad .text-container,
-    .watch .text-container,
-    .airpods .text-container,
-    .musictv .text-container,
-    .imac .text-container {
-        padding: 0 15px;
-    }
-
-    .service img {
-        width: 180px;
-        height: 180px;
-    }
-
-    .service .text-container {
-        width: 80%;
-    }
-
-    .musictv .text,
-    .musictv .imagen {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .musictv .ct2 {
-        margin-top: 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 30px;
-    }
-    h2 {
-        font-size: 18px;
-    }
-    h3 {
-        font-size: 16px;
-    }
-    .enlace-info {
-        font-size: 16px;
-    }
-    nav .enlaces a {
-        font-size: 10px;
-        padding: 3px;
-    }
-    .service img {
-        width: 150px;
-        height: 150px;
-    }
-}
 
 /** MENU DE NAVEGACION */
 nav{
