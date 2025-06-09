@@ -342,8 +342,8 @@
                         <!-- Honeypot para bots -->
                         <input type="hidden" name="_honey" style="display:none" />
 
-                        <!-- Asunto dinámico: "{name} quiere contactarte" -->
-                        <input type="hidden" name="_subject" value="{name} quiere contactarte" />
+                        <!-- Campo oculto para el asunto, será establecido por JavaScript -->
+                        <input type="hidden" name="_subject" />
 
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label>
@@ -475,6 +475,13 @@
             
             try {
                 const formData = new FormData(form);
+
+                // Establecer el asunto dinámicamente en FormData
+                const nameInput = document.getElementById('nombre');
+                if (nameInput) {
+                    formData.set('_subject', `${nameInput.value} quiere contactarte`);
+                }
+                
                 const response = await fetch('https://formsubmit.co/rox.cas.mol@gmail.com', {
                     method: 'POST',
                     body: formData
