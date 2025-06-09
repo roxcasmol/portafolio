@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (currentPathname.endsWith('/index.html') || currentPathname === '/') {
         navbarPath = './components/navbar.html'; // Desde la raíz del portafolio
     } else if (currentPathname.startsWith('/pages/')) {
-        navbarPath = '../components/navbar.html'; // Desde la carpeta pages/
+        navbarPath = '../../components/navbar.html'; // Desde la carpeta pages/
+    } else if (currentPathname.startsWith('/demos/')) {
+        // Asumimos que los demos están al menos a un nivel de profundidad (ej. /demos/mi-demo/index.html)
+        navbarPath = '../../components/navbar.html'; // Desde la carpeta demos/demo-name/
     }
 
     fetch(navbarPath)
@@ -96,12 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         navbar.classList.add('scrolled');
                     }
                 }
-
-                // Inicializar todos los tooltips y popovers de Bootstrap (si es necesario)
-                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-                var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-                    return new bootstrap.Tooltip(tooltipTriggerEl)
-                });
             } else {
                 console.error('Placeholder del navbar no encontrado: #navbar-placeholder');
             }
