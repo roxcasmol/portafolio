@@ -1,0 +1,486 @@
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0; /* Color de texto claro para fondo oscuro */
+    margin-top: 0;
+    padding-top: 56px; /* Altura del navbar fijo */
+    background-color: #05051a; /* Fondo ultra oscuro para el tema futurista */
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 56px; /* Altura del navbar fijo */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Share Tech Mono', monospace; /* Tipografía monoespaciada para títulos */
+    color: #00C8FF; /* Cian para títulos */
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(0, 200, 255, 0.5); /* Sombra de neón sutil para todos los títulos */
+}
+
+.navbar {
+    background-color: #0f0f2a !important; /* Fondo oscuro ligeramente más claro para el navbar */
+    border-bottom: 2px solid rgba(0, 200, 255, 0.4); /* Borde de neón cian */
+}
+
+.navbar-brand {
+    color: #A43FFF !important; /* Púrpura para la marca */
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.7rem;
+    text-shadow: 0 0 10px rgba(164, 63, 255, 0.7); /* Efecto de neón para la marca */
+}
+
+.navbar-nav .nav-link {
+    color: #f0f0f0 !important; /* Blanco para los enlaces */
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Ajusta la posición de la línea */
+    width: 0%;
+    height: 2px;
+    background-color: #00C8FF; /* Cian para la línea */
+    box-shadow: 0 0 8px rgba(0, 200, 255, 0.7); /* Sombra de neón */
+    transition: width 0.3s ease-out;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #00C8FF !important; /* Cian en hover/activo */
+}
+
+.hero-section {
+    position: relative;
+    height: 600px; /* Altura fija para el carrusel */
+    overflow: hidden;
+}
+
+.hero-section .carousel-item img {
+    height: 600px;
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
+}
+
+.hero-section .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
+    padding: 20px;
+    border-radius: 8px;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 800px;
+}
+
+.hero-section .carousel-caption h5 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.hero-section .carousel-caption p {
+    font-size: 1.2rem;
+    color: #f8f9fa;
+}
+
+/* Estilos para el nuevo Header/Hero Section de la Landing Page */
+.landing-hero-section {
+    background-color: #0a0a2a; /* Fondo muy oscuro para el header */
+    height: 600px; /* Altura generosa para el header */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 56px;
+    border-bottom: 3px solid rgba(164, 63, 255, 0.5); /* Borde inferior púrpura más pronunciado */
+    position: relative;
+    overflow: hidden; /* Para contener posibles animaciones de fondo */
+}
+
+.landing-hero-section h1 {
+    color: #00C8FF; /* Cian para el título principal */
+    font-size: 5rem; /* Título más grande */
+    text-shadow: 0 0 25px rgba(0, 200, 255, 1), 0 0 40px rgba(0, 200, 255, 0.8); /* Efecto de neón más fuerte */
+    margin-bottom: 15px;
+}
+
+.landing-hero-section p {
+    font-size: 2.2rem; /* Subtítulo más grande */
+    opacity: 0.95;
+    color: #e0e0e0; /* Texto claro */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Sombra sutil para el subtítulo */
+}
+
+/* Estilos para el Carrusel Circular Personalizado */
+.circular-carousel-container {
+    position: relative;
+    width: 100%;
+    height: 750px; /* Altura del contenedor del carrusel, más espacio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #05051a; /* Fondo ultra oscuro */
+    perspective: 1200px; /* Mayor perspectiva para mejor 3D */
+    border-bottom: 3px solid rgba(0, 200, 255, 0.5); /* Borde cian más pronunciado */
+}
+
+.carousel-wrapper {
+    position: absolute;
+    width: 700px; /* Ancho base del wrapper para escritorio, más grande */
+    height: 700px; /* Asegura que el wrapper sea cuadrado */
+    transform-style: preserve-3d;
+    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Curva de animación más suave */
+    animation: rotateCarousel 40s infinite linear; /* Rotación más lenta */
+}
+
+.carousel-wrapper:hover {
+    animation-play-state: paused;
+}
+
+.carousel-item-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: transform 0.8s ease, opacity 0.8s ease; /* Transición más larga */
+}
+
+.carousel-item-custom img {
+    width: 200px; /* Tamaño de la imagen para escritorio, AUMENTADO */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px; /* Bordes más redondeados */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7), 0 0 20px rgba(164, 63, 255, 0.5); /* Sombra con toque púrpura */
+    border: 4px solid rgba(164, 63, 255, 0.6); /* Borde púrpura más grueso */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.carousel-item-custom .caption {
+    position: absolute;
+    bottom: -150px; /* Inicialmente fuera de vista, ajustado */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 370px; /* Ancho fijo para el caption (imagen 200px + 30px) */
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo más opaco para el caption */
+    color: #e0e0e0;
+    text-align: center;
+    border-radius: 10px;
+    opacity: 0;
+    transition: bottom 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67), opacity 0.4s ease; /* Transición personalizada */
+    pointer-events: none;
+    border: 2px solid rgba(0, 200, 255, 0.4); /* Borde cian */
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.5); /* Sombra de neón para el caption */
+}
+
+.carousel-item-custom .caption h5 {
+    color: #00C8FF; /* Cian para el título del caption */
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.5rem; /* Título de caption más grande */
+    margin-bottom: 8px;
+}
+
+.carousel-item-custom .caption p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    margin-bottom: 0;
+}
+
+/* Efecto de Hover */
+.carousel-item-custom:hover img {
+    transform: scale(1.25) translateZ(80px); /* Zoom y proyección más pronunciada */
+    box-shadow: 0 10px 40px rgba(0, 200, 255, 0.8), 0 0 30px rgba(164, 63, 255, 0.7); /* Sombra de neón más fuerte */
+    border-color: #00C8FF; /* Cian al hacer hover */
+}
+
+.carousel-item-custom:hover .caption {
+    bottom: 240px; /* POSICIÓN DEL CAPTION AJUSTADA: Más arriba, justo debajo de la imagen */
+    opacity: 1;
+}
+
+/* Animación de rotación */
+@keyframes rotateCarousel {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+/* Estilos para la sección de servicios */
+#services {
+    background-color: #0a0a2a; /* Fondo oscuro similar al header */
+    color: #e0e0e0;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#services .service-block {
+    background-color: #15153a; /* Fondo ligeramente más claro que el cuerpo */
+    padding: 35px;
+    border: 2px solid rgba(164, 63, 255, 0.4); /* Borde púrpura más pronunciado */
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+#services .service-block:hover {
+    box-shadow: 0 0 30px rgba(164, 63, 255, 0.8), 0 0 15px rgba(0, 200, 255, 0.5); /* Sombra de neón dual */
+    transform: translateY(-8px) scale(1.02); /* Efecto de levantamiento y ligero zoom */
+    border-color: #00C8FF; /* Borde cian en hover */
+}
+
+#services .service-block i {
+    color: #A43FFF; /* Púrpura para los íconos */
+    margin-bottom: 20px;
+    font-size: 3.5rem; /* Iconos más grandes */
+    text-shadow: 0 0 10px rgba(164, 63, 255, 0.7); /* Sombra de neón para íconos */
+}
+
+#services .service-block h4 {
+    color: #00C8FF; /* Cian para títulos de servicio */
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+}
+
+#services .service-block p {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+}
+
+/* Estilos para el formulario de contacto */
+#contact {
+    background-color: #0f0f2a; /* Fondo oscuro para la sección de contacto */
+    color: #e0e0e0;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-top: 3px solid rgba(0, 200, 255, 0.5); /* Borde superior cian más pronunciado */
+}
+
+#contact h2 {
+    color: #A43FFF; /* Púrpura para el título de contacto */
+    text-shadow: 0 0 15px rgba(164, 63, 255, 0.7); /* Sombra de neón */
+}
+
+#contact .form-control {
+    border-radius: 0.5rem; /* Bordes más redondeados */
+    padding: 1rem 1.2rem;
+    background-color: #1a1a2e; /* Fondo oscuro para los inputs */
+    border: 2px solid rgba(0, 200, 255, 0.4); /* Borde cian */
+    color: #e0e0e0; /* Texto claro */
+    font-size: 1.1rem;
+}
+
+#contact .form-control:focus {
+    border-color: #A43FFF; /* Púrpura al enfocar */
+    box-shadow: 0 0 0 0.25rem rgba(164, 63, 255, 0.4), 0 0 15px rgba(164, 63, 255, 0.6); /* Sombra de neón más fuerte */
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+#contact .form-label {
+    color: #00C8FF; /* Cian para las etiquetas */
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+#contact .btn-primary {
+    background-color: #A43FFF; /* Púrpura para el botón */
+    border-color: #A43FFF;
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    text-transform: uppercase; /* Mayúsculas para el texto del botón */
+    letter-spacing: 1.5px;
+    box-shadow: 0 0 15px rgba(164, 63, 255, 0.5); /* Sombra de neón inicial */
+}
+
+#contact .btn-primary:hover {
+    background-color: #00C8FF; /* Cian en hover */
+    border-color: #00C8FF;
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.8), 0 0 10px rgba(164, 63, 255, 0.5); /* Sombra de neón cian más fuerte */
+    transform: translateY(-2px);
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #0f0f2a; /* Fondo oscuro similar al navbar */
+    color: #e0e0e0;
+    padding: 25px 0;
+    border-top: 2px solid rgba(164, 63, 255, 0.4); /* Borde púrpura de neón */
+}
+
+footer a {
+    color: #00C8FF; /* Cian para los enlaces del footer */
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer a:hover {
+    color: #A43FFF; /* Púrpura en hover */
+    text-shadow: 0 0 8px rgba(164, 63, 255, 0.7); /* Sombra de neón */
+}
+
+/* Media Queries para responsividad general */
+@media (max-width: 992px) {
+    .landing-hero-section {
+        height: 500px;
+    }
+
+    .landing-hero-section h1 {
+        font-size: 4rem;
+    }
+
+    .landing-hero-section p {
+        font-size: 2rem;
+    }
+
+    .circular-carousel-container {
+        height: 650px;
+    }
+    .carousel-wrapper {
+        width: 650px;
+        height: 650px;
+    }
+    .carousel-item-custom img {
+        width: 180px;
+        height: 180px;
+    }
+    .carousel-item-custom .caption h5 {
+        font-size: 1.3rem;
+    }
+    .carousel-item-custom .caption p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .landing-hero-section {
+        height: 400px;
+    }
+
+    .landing-hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .landing-hero-section p {
+        font-size: 1.6rem;
+    }
+
+    .circular-carousel-container {
+        height: 550px;
+    }
+
+    .carousel-wrapper {
+        width: 550px;
+        height: 550px;
+    }
+
+    .carousel-item-custom img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .carousel-item-custom .caption {
+        padding: 10px;
+        width: 180px; /* Ancho fijo para el caption (imagen 150px + 30px) */
+    }
+    .carousel-item-custom .caption h5 {
+        font-size: 1.1rem;
+    }
+
+    .carousel-item-custom .caption p {
+        font-size: 0.8rem;
+    }
+
+    #services .service-block, #contact .form-control, #contact .btn-primary {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .landing-hero-section {
+        height: 350px;
+    }
+
+    .landing-hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .landing-hero-section p {
+        font-size: 1.3rem;
+    }
+
+    .circular-carousel-container {
+        height: 480px;
+    }
+
+    .carousel-wrapper {
+        width: 480px;
+        height: 480px;
+    }
+
+    .carousel-item-custom img {
+        width: 120px; 
+        height: 120px;
+    }
+    .carousel-item-custom .caption {
+        padding: 10px;
+        width: 150px; /* Ancho fijo para el caption (imagen 120px + 30px) */
+    }
+    .carousel-item-custom .caption h5 {
+        font-size: 1rem;
+    }
+    .carousel-item-custom .caption p {
+        font-size: 0.7rem;
+    }
+
+    #services .service-block, #contact .form-control, #contact .btn-primary {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .landing-hero-section {
+        height: 300px;
+    }
+    .landing-hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .landing-hero-section p {
+        font-size: 1rem;
+    }
+    .circular-carousel-container {
+        height: 400px;
+    }
+
+    .carousel-wrapper {
+        width: 400px;
+        height: 400px;
+    }
+    .carousel-item-custom img {
+        width: 100px;
+        height: 100px;
+    }
+    .carousel-item-custom .caption {
+        width: 130px; /* Ancho fijo para el caption (imagen 100px + 30px) */
+    }
+}
+
