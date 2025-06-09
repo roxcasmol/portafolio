@@ -6,60 +6,6 @@ body {
     line-height: 1.7;
 }
 
-.navbar {
-    transition: all 0.5s ease-in-out; /* Transición más suave para el efecto de scroll */
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #333333 !important; /* Navbar oscuro por defecto */
-    z-index: 999; /* Asegura que el navbar esté por encima de otros elementos */
-    border-bottom: none; /* Eliminar borde inferior si lo había */
-}
-
-.navbar.scrolled {
-    background-color: rgba(51, 51, 51, 0.9) !important; /* Fondo más oscuro al scroll */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.navbar-brand {
-    font-weight: 700;
-    font-size: 1.8rem;
-    color: #ffffff !important; /* Color blanco para la marca */
-    transition: color 0.3s ease;
-    text-shadow: none; /* Asegurar que no haya sombra de texto */
-}
-
-.navbar-brand:hover {
-    color: #149ddd !important; /* Color de acento al hover */
-}
-
-.navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.9) !important; /* Texto blanco para enlaces */
-    font-weight: 600;
-    position: relative;
-    padding: 10px 15px; /* Más padding para los enlaces */
-    transition: color 0.3s ease;
-    text-shadow: none; /* Asegurar que no haya sombra de texto */
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-    color: #149ddd !important; /* Color primario al hover/activo */
-    text-shadow: none; /* Asegurar que no haya sombra de texto */
-}
-
-.navbar-nav .nav-link.active::after {
-    content: '';
-    position: absolute;
-    left: 15px; /* Ajusta la posición de la línea */
-    bottom: 5px; /* Ajusta la posición de la línea */
-    width: calc(100% - 30px); /* Ancho de la línea */
-    height: 2px;
-    background-color: #149ddd; /* Color primario */
-    transition: width 0.3s ease;
-}
-
 main {
     padding-top: 120px; /* Ajustado para la navegación fija */
 }
@@ -142,20 +88,6 @@ footer {
 }
 
 /* Media Queries para responsividad */
-@media (max-width: 991.98px) { /* Centra el menú en pantallas pequeñas (Bootstrap's lg breakpoint) */
-    .navbar-collapse {
-        justify-content: center;
-    }
-
-    .navbar-nav {
-        width: 100%;
-    }
-
-    .navbar-nav .nav-item {
-        text-align: center;
-    }
-}
-
 @media (max-width: 768px) {
     .card {
         margin-bottom: 1.5rem;

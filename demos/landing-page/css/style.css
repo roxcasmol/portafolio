@@ -19,79 +19,6 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 0 0 8px rgba(0, 200, 255, 0.5); /* Sombra de neón sutil para todos los títulos */
 }
 
-.navbar {
-    background-color: #0f0f2a !important; /* Fondo oscuro ligeramente más claro para el navbar */
-    border-bottom: 2px solid rgba(0, 200, 255, 0.4); /* Borde de neón cian */
-}
-
-.navbar-brand {
-    color: #A43FFF !important; /* Púrpura para la marca */
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.7rem;
-    text-shadow: 0 0 10px rgba(164, 63, 255, 0.7); /* Efecto de neón para la marca */
-}
-
-.navbar-nav .nav-link {
-    color: #f0f0f0 !important; /* Blanco para los enlaces */
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px; /* Ajusta la posición de la línea */
-    width: 0%;
-    height: 2px;
-    background-color: #00C8FF; /* Cian para la línea */
-    box-shadow: 0 0 8px rgba(0, 200, 255, 0.7); /* Sombra de neón */
-    transition: width 0.3s ease-out;
-}
-
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link.active::after {
-    width: 100%;
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-    color: #00C8FF !important; /* Cian en hover/activo */
-}
-
-.hero-section {
-    position: relative;
-    height: 600px; /* Altura fija para el carrusel */
-    overflow: hidden;
-}
-
-.hero-section .carousel-item img {
-    height: 600px;
-    object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
-}
-
-.hero-section .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
-    padding: 20px;
-    border-radius: 8px;
-    bottom: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    max-width: 800px;
-}
-
-.hero-section .carousel-caption h5 {
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.hero-section .carousel-caption p {
-    font-size: 1.2rem;
-    color: #f8f9fa;
-}
-
 /* Estilos para el nuevo Header/Hero Section de la Landing Page */
 .landing-hero-section {
     background-color: #0a0a2a; /* Fondo muy oscuro para el header */
@@ -333,37 +260,9 @@ footer a:hover {
     text-shadow: 0 0 8px rgba(164, 63, 255, 0.7); /* Sombra de neón */
 }
 
-/* Media Queries para responsividad general */
-@media (max-width: 991.98px) { /* Centra el menú en pantallas pequeñas (Bootstrap's lg breakpoint) */
-    .navbar-collapse {
-        justify-content: center;
-    }
-
-    .navbar-nav {
-        width: 100%;
-    }
-
-    .navbar-nav .nav-item {
-        text-align: center;
-    }
-
-    body {
-        padding-top: 0; /* Eliminar el padding-top del body */
-    }
-    html {
-        scroll-padding-top: 56px; /* Ajustar a la altura del navbar colapsado */
-    }
-
-    .landing-hero-section {
-        margin-top: 200px; /* Aplicar margin-top a la sección hero para compensar el navbar expandido */
-        height: 550px; /* Ajustar altura si es necesario */
-    }
-    .landing-hero-section h1 {
-        font-size: 4rem;
-    }
-    .landing-hero-section p {
-        font-size: 2rem;
-    }
+/* Media Queries para responsividad */
+@media (max-width: 991.98px) { 
+    /* Se eliminaron estilos del navbar que ahora son manejados por el componente centralizado */
 }
 
 @media (max-width: 992px) {

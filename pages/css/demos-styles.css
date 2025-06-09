@@ -1,0 +1,10 @@
+#all-demos {
+    background-color: #ffffff !important;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1.5rem;
+    }
+} 
