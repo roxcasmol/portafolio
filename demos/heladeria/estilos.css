@@ -80,29 +80,20 @@ h3{
 
 
 
-/** GRID */
-.grid{
-     display: grid;
-     grid-template-columns: repeat(12, 1fr);
-     grid-template-rows: auto;
-     height: 100%;
-}
-
-.container-center{
-     width: 85%;
-     margin: 0 auto;
-}
-
-.span6{
-     grid-column: span 6;
-}
-
-
 /** SECCIONES */
 section{
      position: relative;
      width: 100%;
-     height: 100vh;
+     min-height: 60vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 50px 0;
+     scroll-margin-top: 95px;
+}
+
+section.full{
+     padding: 0;
 }
 
 section.full::before{
@@ -122,7 +113,9 @@ section.full::before{
 /** CONTENEDOR BACKGROUND  */
 .background{
      background-size: cover !important;
-     background-position: right !important;
+     background-position: center !important;
+     height: 100%;
+     min-height: 300px;
 }
 
 
@@ -131,18 +124,19 @@ section.full::before{
 .text-content{
      position: relative;
      width: 100%;
-     height: 100%;
+     height: auto;
      display: flex;
      justify-content: center;
      align-items: center;
      flex-direction: column;
      z-index: 1;
+     text-align: center;
 }
 
 
 /*? Full */
 .text-content.full{
-     grid-column: span 12;
+     width: 100%;
 }
 
 .text-content.full h1,
@@ -153,43 +147,44 @@ section.full::before{
 }
 
 .text-content.full h1{
-     font-size: 115px;
-     letter-spacing: 20px;
-     line-height: 1.5;
-     font-family: Arial, Helvetica, sans-serif;
+     font-size: clamp(3em, 8vw, 7.5em);
+     letter-spacing: 0.5em;
+     line-height: 1.2;
+     font-family: var(--font-principal);
 }
 
 
 .text-content.full h2{
-     font-size: 50px;
-     letter-spacing: 2px;
+     font-size: clamp(1.5em, 4vw, 3em);
+     letter-spacing: 0.1em;
      font-weight: 100;
-     line-height: 0.1;
+     line-height: 1;
 }
 
 
 
 /*? Lateral  */
 .text-content.lateral{
-     padding: 0 50px;
+     padding: 20px;
+     width: 100%;
 }
 
 .text-content.lateral h1{
-     font-size: 55px;
+     font-size: clamp(2em, 5vw, 3.4375em);
      font-weight: 400;
-     letter-spacing: 2px;
-     line-height: 1;
+     letter-spacing: 0.1em;
+     line-height: 1.2;
      text-align: center;
 }
 
 .text-content.lateral h3{
-     font-size: 40px;
+     font-size: clamp(1.5em, 3.5vw, 2.5em);
      font-weight: 600;
      text-align: center;
 }
 
 .text-content.lateral p{
-     font-size: 20px;
+     font-size: clamp(1em, 2.5vw, 1.25em);
      margin: 20px 0;
      text-align: center;
      letter-spacing: 0.5px;
@@ -205,27 +200,24 @@ nav{
      top: 0;
      left: 0;
      width: 100%;
-     height: 50px;
+     height: auto;
      background: rgba(249, 219, 121, 0.745);
-     z-index: 3;
-}
-
-nav .grid{
-     justify-items: start;
-     align-items: center;
+     z-index: 1000;
+     backdrop-filter: blur(5px);
 }
 
 nav .enlaces{
-     grid-column: span 10;
      display: flex;
+     flex-direction: column;
      justify-content: center;
      align-items: center;
+     width: 100%;
 }
 
 nav .enlaces a{
-     margin-right: 20px;
+     margin: 10px 0;
      font-family: var(--font-principal);
-     font-size: 20px;
+     font-size: 1.25em;
      text-transform: uppercase;
      letter-spacing: 1px;
      transition:  all .5s;
@@ -238,31 +230,43 @@ nav .enlaces a:hover{
 
 /*? Sociales */
 .sociales{
-     grid-column: span 2;
      display: flex;
-     justify-content: flex-end;
+     justify-content: center;
      width: 100%;
+     margin-top: 20px;
 }
 
 .sociales a{
      width: 30px;
      height: 30px;
      border-radius: 50%;
-     background: #000;
-     color: #FFF;
      display: flex;
      justify-content: center;
      align-items: center;
+     color: var(--gris600);
+     background: #FFF;
+     margin: 0 5px;
+     font-size: 1em;
+     transition: all .5s;
+}
+
+.sociales a:hover{
+     background: var(--gris600);
+     color: #FFF;
 }
 
 
 
 /** HEADER */
 header{
-     position: relative;
      width: 100%;
-     height: calc(100vh + 50px);
-     background: #F9DB79;
+     min-height: calc(80vh - 95px);
+     padding: 50px 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     position: relative;
+     background: #B5E8D5;
 }
 
 header::before{
@@ -272,27 +276,20 @@ header::before{
      left: 0;
      width: 100%;
      height: 100%;
-     background: url(img/image1.webp);
-     background-repeat: no-repeat;
+     background-image: url(img/image1.webp);
      background-position: center;
-}
-
-header .grid{
-     justify-items: center;
-     align-items: center;
+     background-repeat: no-repeat;
 }
 
 header .text-content{
-     padding: 200px 0 0 0;
+     width: 100%;
+     padding: 20px;
 }
 
 header .text-content h3{
-     position: absolute;
-     bottom: 50px;
-     right: 0;
-     font-size: 50px;
-     font-weight: 700;
-     color:  #000;
+     color: #FFF;
+     font-size: clamp(2.5em, 5vw, 3em);
+     font-weight: 300;
 }
 
 
@@ -346,7 +343,6 @@ header .text-content h3{
 
 /** HELADOS  */
 .helado{
-     height: 115vh;
      background: url(img/image7.webp), #B5E8D5;
      background-attachment: fixed;
      display: flex;
@@ -362,71 +358,171 @@ header .text-content h3{
 /** FOOTER */
 footer{
      width: 100%;
-     height: 400px;
+     height: auto;
+     padding: 30px 20px;
+}
+
+/* centar items  */
+footer .items{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+/* centrar itens sociales */
+footer .items .sociales{
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 
 footer .grid{
-     grid-template-columns: repeat(5, 1fr);
+     display: grid;
+     grid-template-columns: 1fr;
      gap: 20px;
      justify-items: center;
      align-content: center;
+     text-align: center;
 }
 
 footer h2{
-     font-size: 28px;
+     font-size: 24px;
      font-weight: 400;
      text-transform: uppercase;
+     margin-bottom: 10px;
 }
 
 footer p,
-footer ul, 
 footer input{
-     margin: 10px 0;
+     margin: 8px 0;
+     font-size: 14px;
 }
 
-
-footer ul{
-     list-style: none;
-}
-
-footer ul li a:hover{
-     text-decoration: underline;
-}
 
 footer input{
      width: 100%;
+     max-width: 300px;
      height: 40px;
      padding: 0 20px;
-}
-
-footer input::placeholder{
-     letter-spacing: 1px;
-     color: var(--gris600);
+     margin: 10px auto;
 }
 
 footer .btn{
      width: 100%;
+     max-width: 300px;
+     margin: 10px auto;
 }
 
 footer .sociales{
-     justify-content: flex-start;
+     justify-content: center;
+     margin: 15px 0;
 }
 
+@media (min-width: 768px) {
+     footer{
+          padding: 50px 20px;
+     }
 
+     footer .grid{
+          grid-template-columns: repeat(2, 1fr);
+          text-align: left;
+          gap: 30px;
+     }
+
+     footer ul{
+          display: block;
+     }
+
+     footer h2{
+          font-size: 28px;
+     }
+
+     footer p,
+     footer ul, 
+     footer input{
+          font-size: 16px;
+     }
+
+     footer .sociales{
+          justify-content: flex-start;
+     }
+}
+
+@media (min-width: 992px) {
+     footer .grid{
+          grid-template-columns: repeat(5, 1fr);
+     }
+}
+
+@media (min-width: 768px) {
+     nav .enlaces{
+          flex-direction: row;
+          width: auto;
+     }
+
+     nav .enlaces a{
+          margin: 0 20px;
+     }
+
+     .sociales{
+          justify-content: flex-end;
+          margin-top: 0;
+     }
+
+     .sociales a{
+          margin: 0 10px;
+     }
+
+     .background{
+          background-position: right !important;
+     }
+
+     .text-content.full h1{
+          letter-spacing: 20px;
+     }
+
+     .text-content.full h2{
+          line-height: 0.1;
+     }
+
+     .text-content.lateral{
+          padding: 0 50px;
+     }
+
+     .text-content.lateral h1{
+          letter-spacing: 2px;
+     }
+}
+
+@media (min-width: 992px) {
+     section{
+          padding: 0;
+     }
+
+     header .text-content h3{
+          font-size: 65px;
+     }
+}
+
+@media (min-width: 1200px) {
+     header .text-content h3{
+          font-size: 75px;
+     }
+}
 
 /** FOOTER COPY  */
 div.copy{
      width: 100%;
      height: 35px;
      background: #000;
-     display: grid;
-     grid-template-columns: 100%;
-     justify-items: center;
+     display: flex;
+     justify-content: center;
      align-items: center;
 }
 
 div.copy p{
-     color: rgba(255, 2552, 255, 0.5);
+     color: rgba(255, 255, 255, 0.5);
      font-size: 15px;
      font-weight: 600;
+     text-align: center;
 }
