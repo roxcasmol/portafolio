@@ -222,6 +222,14 @@
         left: 20px;
     }
 
+    .timeline ul li:nth-child(2n) .content {
+        margin-left: 0px;
+        margin-right: auto;
+        width: calc(100% - 50px);
+      }
+
+   
+
     /* Todos los elementos de la línea de tiempo ocupan el ancho completo y se alinean a la izquierda */
     .timeline ul li:nth-child(odd),
     .timeline ul li:nth-child(even) {
@@ -253,6 +261,8 @@
         width: auto; /* Permite que el contenido ocupe todo el ancho disponible */
         margin: 0; /* Elimina márgenes específicos */
     }
+
+  
 
     /* Ajustes de tamaño de fuente para móvil */
     .timeline .content h3 {
