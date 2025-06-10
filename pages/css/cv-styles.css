@@ -1,95 +1,261 @@
-/* Estilos generales para el CV */
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #ffffff; /* Cambiado a blanco */
-    color: #333333; /* Cambiado a un color oscuro para contraste */
-    line-height: 1.7;
+/*====================
+  Estilos Generales del Currículum Vitae
+====================*/
+
+/* Estilos para el Cuerpo y Diseño Principal */
+/* (Estos estilos se han movido a general.css) */
+
+
+/* Estilos para Títulos (h1-h6) */
+/* (Estos estilos se han movido a general.css) */
+
+
+/* Estilos para Tarjetas */
+/* (Estos estilos se han movido a general.css) */
+
+
+/* Unificación de estilos para textos dentro de las tarjetas */
+/* Aplica a párrafos, items de lista y texto en negrita dentro del cuerpo de la tarjeta */
+/* (Estos estilos se han movido a general.css) */
+
+
+/* Estilos para Barras de Progreso */
+/* (Estos estilos se han movido a general.css) */
+
+
+/* Estilos para el Footer */
+/* (Estos estilos se han movido a general.css) */
+
+
+/* Media Queries para Responsividad General */
+/* (Estos estilos se han movido a general.css) */
+
+
+/*====================
+  Línea de Tiempo de Experiencia Profesional
+====================*/
+
+.timeline h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 5px;
 }
 
-main {
-    padding-top: 120px; /* Ajustado para la navegación fija */
+
+.timeline {
+    position: relative;
+    margin: 50px auto;
+    padding: 40px 0;
+    width: 100%;
+    min-height: 100vh; /* Asegura que la línea de tiempo ocupe toda la altura de la vista */
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway', sans-serif; /* Usar Raleway para los títulos (como en styles.css) */
-    color: #333333; /* Restaurar color oscuro para títulos */
-    text-shadow: none; /* Eliminar sombra de texto */
-    margin-bottom: 1.5rem;
+/* Línea vertical central de la línea de tiempo */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px; /* Grosor de la línea */
+    height: 100%;
+    background: #149ddd; /* Color primario */
+    transform: translateX(-50%); /* Centra la línea */
+    z-index: 0; /* Coloca la línea detrás del contenido y las cápsulas de tiempo */
 }
 
-.card {
-    background-color: #f8f9fa; /* Un blanco más suave para las tarjetas */
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.timeline ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* Elimina los puntos predeterminados de la lista */
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+/* Elemento individual de la línea de tiempo (lado izquierdo o derecho) */
+.timeline ul li {
+    position: relative;
+    width: 50%; /* Cada elemento ocupa la mitad del ancho de la línea de tiempo */
+    padding: 20px 0; /* Relleno vertical */
+    box-sizing: border-box;
 }
 
-.card-title {
-    color: #333333; /* Color oscuro para títulos de tarjetas */
-    text-shadow: none;
-    margin-bottom: 1rem;
+/* Estilos para elementos impares (alineados a la izquierda) */
+.timeline ul li:nth-child(odd) {
+    float: left; /* Alinea a la izquierda */
+    text-align: right; /* El texto dentro del contenido se alinea a la derecha */
+    clear: both; /* Limpia los floats para evitar superposiciones */
 }
 
-.card-text {
-    color: #555555 !important;
+/* Estilos para elementos pares (alineados a la derecha) */
+.timeline ul li:nth-child(even) {
+    float: right; /* Alinea a la derecha */
+    text-align: left; /* El texto dentro del contenido se alinea a la izquierda */
+    clear: both;
 }
 
-/* Estilos para el texto de los párrafos en las tarjetas */
-.card-body p {
-    color: #555555 !important;
-    opacity: 1 !important;
-    text-shadow: none !important;
+/* Contenedor del contenido dentro de cada elemento de la línea de tiempo */
+.timeline .content {
+    padding: 20px;
+    background: #fff; /* Fondo blanco para las cajas de contenido */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease;
+    position: relative; /* Para que funcione z-index */
+    z-index: 1; /* Coloca encima de la línea */
 }
 
-/* Estilos para el texto de las listas */
-.card-body ul li {
-    color: #555555 !important;
-    opacity: 1 !important;
+/* Efecto de hover para la caja de contenido */
+.timeline .content:hover {
+    transform: translateY(-5px); /* Efecto de levantamiento */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra más fuerte al pasar el ratón */
 }
 
-.card-body ul li strong {
-    color: #555555 !important;
-    opacity: 1 !important;
+/* Dimensionamiento y margen específicos para cajas de contenido impares */
+/* El contenido está en la izquierda, se empuja hacia la derecha para hacer espacio para la fecha */
+.timeline ul li:nth-child(odd) .content {
+    margin-left: auto; /* Empuja el contenido al borde derecho de su 50% de ancho */
+    margin-right: 50px; /* Espacio entre la caja de contenido y la cápsula de tiempo/línea central */
+    width: calc(100% - 50px); /* Ancho del contenido (50% de LI - margen) */
 }
 
-/* Estilos para las barras de progreso */
-.progress {
-    height: 20px;
-    background-color: #333;
-    border-radius: 10px;
-    margin-bottom: 1rem;
+/* Dimensionamiento y margen específicos para cajas de contenido pares */
+/* El contenido está en la derecha, se empuja hacia la izquierda para hacer espacio para la fecha */
+.timeline ul li:nth-child(even) .content {
+    margin-left: 50px; /* Espacio entre la caja de contenido y la cápsula de tiempo/línea central */
+    margin-right: auto; /* Empuja el contenido al borde izquierdo de su 50% de ancho */
+    width: calc(100% - 50px); /* Ancho del contenido (50% de LI - margen) */
 }
 
-.progress-bar {
-    background-color: #149ddd;
-    border-radius: 10px;
+/* Estilos para elementos de texto del contenido */
+.timeline .content p {
+    font-size: 0.6rem; /* Tamaño de fuente legible */
+    color: #444444; /* Color de texto estándar */
 }
 
-/* Estilos para el footer */
-footer {
-    background-color: #333333 !important; /* Fondo oscuro para el footer */
-    border-top: 1px solid #555;
-    color: #e0e0e0;
+.timeline .content h3 {
+    font-size: 0.8rem; /* Tamaño de fuente original */
+    color: #149ddd; /* Color primario para los títulos de trabajo */
 }
 
-.social-links a {
-    color: #e0e0e0;
-    transition: color 0.3s ease, transform 0.3s ease;
+.timeline .content h4 {
+    font-size: 0.7rem; /* Tamaño de fuente original */
+    font-weight: 500;
+    color: #6c757d; /* Color secundario para los nombres de la empresa */
 }
 
-.social-links a:hover {
-    color: #149ddd;
-    transform: translateY(-3px);
+/* Estilos para el texto de la pila tecnológica (después de la conversión de lista) */
+.timeline .tech-stack-text {
+    color: #555555; /* Color más oscuro para legibilidad */
+    font-size: 0.6rem;
+    margin-top: 10px;
+    line-height: 1.5;
 }
 
-/* Media Queries para responsividad */
-@media (max-width: 768px) {
-    .card {
-        margin-bottom: 1.5rem;
+/* Estilo de la cápsula de tiempo (fecha) */
+.timeline .time {
+    position: absolute;
+    top: 20px; /* Alineado con la parte superior de la caja de contenido */
+    width: 150px; /* Ancho fijo para la cápsula de tiempo */
+    text-align: center;  
+    background: #149ddd; /* Fondo de color primario */
+    color: #fff; /* Texto blanco */
+    border-radius: 20px;
+    box-shadow: 0 0 0 4px rgba(20, 157, 221, 0.2); /* Sombra suave */
+    transition: all 0.3s ease;
+    font-weight: 500;
+    padding: 10px;
+    z-index: 2; /* Coloca encima del contenido y la línea */
+}
+
+/* Tamaño de fuente para el h4 dentro de la cápsula de tiempo */
+.timeline .time h4 {
+    font-size: 0.7rem; /* Restaurar tamaño de fuente */
+    margin-bottom: 0;
+}
+
+/* Posicionamiento para cápsulas de tiempo impares (alineadas a la izquierda de la línea central) */
+.timeline ul li:nth-child(odd) .time {
+    right: -40%; /* La mitad del ancho de la cápsula de tiempo desde el borde derecho del li (línea central) */
+}
+
+/* Posicionamiento para cápsulas de tiempo pares (alineadas a la derecha de la línea central) */
+.timeline ul li:nth-child(even) .time {
+    left: -40%; /* La mitad del ancho de la cápsula de tiempo desde el borde izquierdo del li (línea central) */
+}
+
+/* Puntos en la línea central */
+.timeline ul li::before {
+    content: '';
+    position: absolute;
+    top: 30px; /* Alineado con el centro vertical de la cápsula de tiempo */
+    width: 12px;
+    height: 12px;
+    background: #149ddd; /* Color primario */
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(20, 157, 221, 0.2);
+    transition: all 0.5s ease;
+    z-index: 1; /* Coloca encima de la línea */
+}
+
+/* Posicionamiento para puntos impares (a la izquierda de la línea central) */
+.timeline ul li:nth-child(odd)::before {
+    right: -6px; /* La mitad del ancho del punto desde la línea central */
+}
+
+/* Posicionamiento para puntos pares (a la derecha de la línea central) */
+.timeline ul li:nth-child(even)::before {
+    left: -6px; /* La mitad del ancho del punto desde la línea central */
+}
+
+/* Efectos de hover para puntos y cápsulas de tiempo */
+.timeline ul li:hover::before {
+    transform: scale(1.5); /* Aumenta el tamaño del punto al pasar el ratón */
+    background: #00bcd4; /* Color de acento al pasar el ratón */
+}
+
+.timeline ul li:hover .time {
+    transform: scale(1.1); /* Aumenta ligeramente la cápsula de tiempo al pasar el ratón */
+    background: #00bcd4; /* Color de acento al pasar el ratón */
+}
+
+/*====================
+  Media Queries para Línea de Tiempo (Responsividad)
+====================*/
+@media screen and (max-width: 768px) {
+    /* La línea central se mueve a la izquierda en pantallas más pequeñas */
+    .timeline::before {
+        left: 20px;
+    }
+
+    /* Todos los elementos de la línea de tiempo ocupan el ancho completo y se alinean a la izquierda */
+    .timeline ul li:nth-child(odd),
+    .timeline ul li:nth-child(even) {
+        width: 100%;
+        float: none; /* Elimina el float */
+        text-align: left;
+        padding-left: 50px; /* Espacio para la línea y el punto */
+        padding-right: 20px;
+        padding-bottom: 50px;
+    }
+
+    /* Posicionamiento de los puntos para móvil */
+    .timeline ul li:nth-child(odd)::before,
+    .timeline ul li:nth-child(even)::before {
+        left: 14px; /* Alinea el punto con la nueva posición de la línea */
+    }
+
+    /* Posicionamiento de la cápsula de tiempo para móvil */
+    .timeline ul li:nth-child(odd) .time,
+    .timeline ul li:nth-child(even) .time {
+        top: -30px; /* Posiciona por encima de la caja de contenido */
+        left: 50px; /* Alinea con el contenido */
+        right: auto;
+    }
+
+    /* Ajustes de la caja de contenido para móvil */
+    .timeline .content {
+        padding: 15px;
+        width: auto; /* Permite que el contenido ocupe todo el ancho disponible */
+        margin: 0; /* Elimina márgenes específicos */
+    }
+
+    /* Ajustes de tamaño de fuente para móvil */
+    .timeline .content h3 {
+        font-size: 1.2rem;
     }
 } 

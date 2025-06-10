@@ -1,57 +1,20 @@
-:root {
-    --primary-color: #149ddd; /* Azul más profundo y profesional (similar al de la plantilla) */
-    --secondary-color: #6c757d; /* Gris oscuro para elementos secundarios */
-    --accent-color: #00bcd4; /* Un azul cian vibrante para acentos sutiles, como el del template */
-    --text-color: #444444; /* Texto principal un poco más suave */
-    --heading-color: #333333; /* Color específico para los títulos */
-    --light-bg-color: #f7f7f7; /* Fondo claro para secciones alternas */
-    --dark-bg-color: #343a40; /* Fondo oscuro para secciones */
-    --white-color: #ffffff;
-    --gray-color: #6c757d;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif; /* Fuente principal para el cuerpo */
-    line-height: 1.7;
-    color: var(--text-color);
-    background-color: var(--white-color);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Raleway', sans-serif; /* Fuente diferente para títulos */
-    color: var(--heading-color);
-    font-weight: 700; /* Negrita para títulos */
-    margin-bottom: 1rem;
-}
-
-/* Estilos generales para secciones */
-section {
-    padding: 60px 0; /* Espaciado ajustado para cada sección */
-    overflow: hidden; /* Para manejar animaciones y elementos salientes */
-}
-
-section.bg-light {
-    background-color: var(--light-bg-color) !important; /* Asegura que el color de fondo claro se aplique */
-}
+/*====================
+  Estilos Específicos del Portafolio Principal
+====================*/
 
 /* Hero Section */
 #home {
-    min-height: 100vh; /* Ocupa al menos toda la altura de la ventana */
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     color: var(--white-color);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra más fuerte para el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     background-position: center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
-    margin-top: 0 !important; /* Eliminar el margen superior del navbar si lo tiene */
+    margin-top: 0 !important;
 }
 
 #home::before {
@@ -61,64 +24,25 @@ section.bg-light {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* Reducido de 0.6 a 0.4 para un overlay más claro */
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
 #home .container {
     z-index: 2;
-    padding-top: 56px; /* Ajuste para evitar que el contenido quede detrás del navbar */
+    padding-top: 56px;
 }
 
 #home h1 {
-    color: var(--white-color); /* Título blanco en la sección Hero */
-    font-size: 3.8rem; /* Tamaño de fuente más grande */
-    margin-bottom: 25px;
-    line-height: 1.2;
+    color: var(--white-color);
+    font-size: 3rem;
     font-weight: 700;
 }
 
 #home p.lead {
-    font-size: 1.6rem; /* Tamaño de fuente más grande */
+    font-size: 1rem;
     margin-bottom: 40px;
     font-weight: 300;
-}
-
-/* Estilos para botones */
-.btn-light {
-    background-color: var(--primary-color); /* Botón principal con color primario */
-    color: var(--white-color);
-    border-color: var(--primary-color);
-    font-weight: 600;
-    padding: 12px 35px;
-    border-radius: 5px; /* Bordes menos redondeados */
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.btn-light:hover {
-    background-color: #1a6da7; /* Un tono más oscuro al hover */
-    border-color: #1a6da7;
-    color: var(--white-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.btn-outline-light {
-    color: var(--white-color);
-    border-color: var(--white-color);
-    font-weight: 600;
-    padding: 12px 35px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.btn-outline-light:hover {
-    background-color: var(--white-color);
-    color: var(--primary-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Sección Sobre Mí */
@@ -147,7 +71,7 @@ section.bg-light {
 #sobre-mi ul.info-list li i {
     color: var(--primary-color);
     font-size: 1.3rem;
-    min-width: 30px; /* Asegura un espaciado consistente para los iconos */
+    min-width: 30px;
 }
 
 #sobre-mi ul.info-list li strong {
@@ -168,11 +92,11 @@ section.bg-light {
 /* Sección Proyectos */
 #proyectos .card {
     border: none;
-    border-radius: 8px; /* Bordes menos redondeados */
+    border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: var(--white-color);
-    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
+    height: 100%;
 }
 
 #proyectos .card:hover {
@@ -181,7 +105,7 @@ section.bg-light {
 }
 
 #proyectos .card-img-top {
-    height: 220px; /* Altura un poco mayor */
+    height: 220px;
     object-fit: cover;
 }
 
@@ -198,7 +122,7 @@ section.bg-light {
 }
 
 #proyectos .card-text {
-    flex-grow: 1; /* Permite que la descripción crezca y empuje el resto hacia abajo */
+    flex-grow: 1;
     margin-bottom: 15px;
 }
 
@@ -208,16 +132,16 @@ section.bg-light {
     margin-right: 7px;
     margin-bottom: 7px;
     border-radius: 3px;
-    background-color: var(--primary-color); /* Badges con color primario */
+    background-color: var(--primary-color);
     color: var(--white-color);
-    display: inline-block; /* Asegura que los badges estén en línea */
+    display: inline-block;
 }
 
 #proyectos .card-footer {
     background-color: var(--white-color);
     border-top: none;
     padding-top: 0;
-    margin-top: auto; /* Empuja los botones al final de la tarjeta */
+    margin-top: auto;
 }
 
 /* Sección Casos de Estudio */
@@ -245,10 +169,9 @@ section.bg-light {
 }
 
 #casos h4 {
-    color: var(--primary-color); /* Títulos de subsección en color primario */
+    color: var(--primary-color);
     margin-top: 30px;
     margin-bottom: 15px;
-    font-weight: 600;
 }
 
 #casos ul li strong {
@@ -292,20 +215,26 @@ section.bg-light {
 #habilidades .card {
     border: none;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: auto;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: var(--white-color);
+}
+
+#habilidades .card-body {
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--bs-card-color);
 }
 
 #habilidades .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 #habilidades .card-title {
+    font-size: 1rem;
+    margin-bottom: 15px;
     color: var(--primary-color);
-    font-size: 1.6rem;
-    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -313,52 +242,56 @@ section.bg-light {
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-bottom: 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 #habilidades ul.list-unstyled li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
     background-color: var(--light-bg-color);
     color: var(--text-color);
-    padding: 12px 25px; /* Aumentado el padding para más espacio */
+    padding: 12px 25px;
     margin: 5px;
     border-radius: 5px;
-    font-size: 1rem; /* Incrementado el tamaño de la fuente */
-    line-height: 1.4; /* Añadida altura de línea para mejor espaciado */
-    text-align: center; /* Asegura que el texto esté centrado dentro del badge */
-    white-space: normal; /* Asegura que el texto se envuelva */
+    font-size: 0.8rem;
+    line-height: 1.4;
+    text-align: center;
+    white-space: normal;
 }
 
 /* Sección Contacto */
 #contacto .lead {
-    font-size: 1.25rem;
-    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
 
 #contacto .form-label {
     font-weight: 600;
-    color: var(--heading-color);
+    margin-bottom: 10px;
 }
 
 #contacto .form-control {
+    border: 1px solid #ddd;
     border-radius: 5px;
-    border: 1px solid #ced4da;
-    padding: 10px 15px;
-    box-shadow: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 12px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
 
 #contacto .form-control:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.25rem rgba(20, 157, 221, 0.25); /* Color de sombra coherente con el primario */
+    box-shadow: none;
 }
 
 #contacto .btn-primary {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
     font-weight: 600;
-    padding: 12px 30px;
+    padding: 12px 35px;
     border-radius: 5px;
     transition: all 0.3s ease;
     text-transform: uppercase;
@@ -377,56 +310,38 @@ section.bg-light {
 
 #contacto .social-icons a {
     color: var(--primary-color);
-    font-size: 2.5rem;
-    margin: 0 15px;
+    font-size: 1.5rem;
+    margin-right: 15px;
     transition: color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
 }
 
 #contacto .social-icons a:hover {
     color: #1a6da7;
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
-/* Footer */
-footer {
-    background-color: var(--dark-bg-color);
-    color: rgba(255, 255, 255, 0.7);
-    padding: 30px 0;
-    font-size: 0.9rem;
-    text-align: center;
-}
 
-footer p {
-    margin-bottom: 0;
-}
-
-footer a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: var(--accent-color);
-}
 
 /* Media Queries para Responsividad */
 @media (max-width: 992px) {
     #home h1 {
         font-size: 3rem;
     }
+
     #home p.lead {
         font-size: 1.4rem;
     }
+
     section {
         padding: 40px 0;
     }
+
     #casos .card-title {
         font-size: 1.8rem;
     }
+
     #casos h4 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -434,21 +349,22 @@ footer a:hover {
     #home h1 {
         font-size: 2.5rem;
     }
+
     #home p.lead {
         font-size: 1.2rem;
     }
-    .btn-light, .btn-outline-light {
+
+    .btn-light,
+    .btn-outline-light {
         padding: 10px 25px;
-        font-size: 0.9rem;
     }
+
     #sobre-mi img {
-        width: 180px;
-        height: 180px;
-        margin-bottom: 20px;
+        max-width: 200px;
     }
+
     #contacto .social-icons a {
-        font-size: 2rem;
-        margin: 0 10px;
+        font-size: 1.3rem;
     }
 }
 
@@ -456,55 +372,56 @@ footer a:hover {
     #home h1 {
         font-size: 2rem;
     }
+
     #home p.lead {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
-    .btn-light, .btn-outline-light {
-        width: 100%;
-        margin-bottom: 15px;
+
+    .btn-light,
+    .btn-outline-light {
+        padding: 8px 20px;
     }
+
     #proyectos .card-title {
         font-size: 1.3rem;
     }
+
     #casos .card-title {
         font-size: 1.5rem;
     }
+
     #habilidades .card-title {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 }
 
-/* Botón flotante de WhatsApp */
+/* Botón de WhatsApp Flotante */
 .whatsapp-float {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366; /* Color de WhatsApp */
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
     color: white;
     width: 60px;
     height: 60px;
     border-radius: 50%;
     text-align: center;
-    font-size: 28px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    z-index: 100;
     display: flex;
-    justify-content: center;
     align-items: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    text-decoration: none !important; /* Asegura que el enlace no tenga subrayado */
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .whatsapp-float:hover {
-    background-color: #1da851; /* Un tono más oscuro al pasar el ratón */
-    transform: translateY(-5px);
+    background-color: #128c7e;
+    color: white;
+    transform: scale(1.1);
 }
 
 .whatsapp-float i {
-    color: white !important;
-    font-size: 28px !important;
-    text-shadow: none !important;
-    font-family: "Font Awesome 6 Brands" !important;
-    line-height: 1;
-    text-decoration: none !important; /* Elimina el subrayado en el icono directamente */
+    line-height: 60px;
 }

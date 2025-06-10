@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Script para el efecto de scroll en el Navbar
     const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
@@ -13,39 +13,40 @@ document.addEventListener('DOMContentLoaded', function() {
     const defaultChartOptions = {
         responsive: true,
         maintainAspectRatio: false,
-        indexAxis: 'y',
         plugins: {
             legend: {
                 display: false
             },
             tooltip: {
                 callbacks: {
-                    label: function(context) {
-                        return context.dataset.label + ': ' + context.raw + (context.chart.config.type === 'doughnut' || context.chart.config.type === 'polarArea' ? '%' : '%');
+                    label: function (context) {
+                        return context.dataset.label + ': ' + context.raw + '%';
                     }
                 }
             }
         },
         scales: {
             x: {
-                beginAtZero: true,
-                max: 100,
                 grid: {
-                    color: 'rgba(255, 255, 255, 0.1)'
+                    color: 'rgba(255, 255, 255, 0.2)'
                 },
                 ticks: {
-                    color: '#e0e0e0'
-                },
-                display: true
+                    color: '#000',
+                    font: {
+                        weight: 'bold'
+                    }
+                }
             },
             y: {
                 grid: {
-                    color: 'rgba(255, 255, 255, 0.1)'
+                    color: 'rgba(255, 255, 255, 0.2)'
                 },
                 ticks: {
-                    color: '#e0e0e0'
-                },
-                display: true
+                    color: '#000',
+                    font: {
+                        weight: 'bold'
+                    }
+                }
             }
         }
     };
@@ -55,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const lightBlue = '#17a2b8';
     const darkGrey = '#343a40';
     const lighterText = '#e0e0e0';
-    
+
     const chartBackgroundColors = [
         'rgba(20, 157, 221, 0.8)', // primary
         'rgba(23, 162, 184, 0.8)', // info
@@ -68,13 +69,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Lenguajes de Programación (Bar Chart)
     const languagesData = [
-        { label: 'PHP', value: 85 },
-        { label: 'JavaScript', value: 90 },
-        { label: 'Python', value: 65 },
+        { label: 'PHP', value: 95 },
+        { label: 'JavaScript', value: 95 },
+        { label: 'Python', value: 60 },
         { label: 'HTML5', value: 95 },
         { label: 'CSS3 (incl. SASS)', value: 95 },
-        { label: 'SQL', value: 80 },
-        { label: 'Java', value: 50 }
+        { label: 'SQL', value: 90 },
+        { label: 'Java', value: 50 },
+        { label: 'C#', value: 50 }
     ];
     const languagesCanvas = document.getElementById('languagesChart');
     if (languagesCanvas) {
@@ -93,6 +95,21 @@ document.addEventListener('DOMContentLoaded', function() {
             options: {
                 ...defaultChartOptions,
                 indexAxis: 'y',
+                plugins: {
+                    ...defaultChartOptions.plugins,
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return context.dataset.label + ': ' + context.raw + '%';
+                            }
+                        },
+                        titleColor: '#000',
+                        bodyColor: '#000',
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        borderColor: '#000',
+                        borderWidth: 1
+                    }
+                }
             }
         });
     }
@@ -100,10 +117,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Frameworks & Librerías (Radar Chart)
     const frameworksData = [
         { label: 'Angular', value: 90 },
-        { label: 'Node.js (Express)', value: 80 },
+        { label: 'Node.js (Express)', value: 90 },
         { label: 'React', value: 80 },
         { label: 'Bootstrap', value: 90 },
-        { label: 'Symfony', value: 65 }
+        { label: 'Symfony', value: 65 },
+        { label: 'Django', value: 65 }
     ];
     const frameworksCanvas = document.getElementById('frameworksChart');
     if (frameworksCanvas) {
@@ -129,10 +147,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     legend: { display: false },
                     tooltip: {
                         callbacks: {
-                            label: function(context) {
+                            label: function (context) {
                                 return context.dataset.label + ': ' + context.raw + '%';
                             }
-                        }
+                        },
+                        titleColor: '#000',
+                        bodyColor: '#000',
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        borderColor: '#000',
+                        borderWidth: 1
                     }
                 },
                 scales: {
@@ -146,7 +169,10 @@ document.addEventListener('DOMContentLoaded', function() {
                             color: 'rgba(255, 255, 255, 0.2)'
                         },
                         pointLabels: {
-                            color: lighterText
+                            color: '#000',
+                            font: {
+                                weight: 'bold'
+                            }
                         },
                         ticks: {
                             display: false
@@ -159,9 +185,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Bases de Datos (Doughnut Chart)
     const databasesData = [
-        { label: 'MySQL', value: 85 },
-        { label: 'MongoDB', value: 75 },
-        { label: 'SQL Server', value: 70 }
+        { label: 'MySQL', value: 95 },
+        { label: 'MongoDB', value: 95 },
+        { label: 'SQL Server', value: 85 },
+        { label: 'PostgreSQL', value: 75 }
     ];
     const databasesCanvas = document.getElementById('databasesChart');
     if (databasesCanvas) {
@@ -184,9 +211,25 @@ document.addEventListener('DOMContentLoaded', function() {
                     legend: {
                         display: true,
                         position: 'right',
-                        labels: { color: lighterText }
+                        labels: {
+                            color: '#000',
+                            font: {
+                                weight: 'bold'
+                            }
+                        }
                     },
-                    tooltip: defaultChartOptions.plugins.tooltip
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return context.dataset.label + ': ' + context.raw + '%';
+                            }
+                        },
+                        titleColor: '#000',
+                        bodyColor: '#000',
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        borderColor: '#000',
+                        borderWidth: 1
+                    }
                 }
             }
         });
@@ -196,12 +239,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const toolsData = [
         { label: 'Moodle (Desarrollo de Plugins)', value: 90 },
         { label: 'Docker', value: 80 },
-        { label: 'Git / GitHub', value: 85 },
+        { label: 'Git / GitHub', value: 90 },
         { label: 'AWS (QuickSight, Polly, ElevenLabs)', value: 85 },
         { label: 'DevOps (CI/CD, Despliegue en Nube)', value: 75 },
         { label: 'Android (Desarrollo Móvil)', value: 60 },
-        { label: 'iOS (Desarrollo Móvil)', value: 60 },
-        { label: 'Inteligencia Artificial (IA) / Machine Learning (ML)', value: 75 }
+        { label: 'iOS (Desarrollo Móvil)', value: 70 },
+        { label: 'Inteligencia Artificial (IA) / Machine Learning (ML)', value: 85 }
     ];
     const toolsCanvas = document.getElementById('toolsChart');
     if (toolsCanvas) {
@@ -220,6 +263,21 @@ document.addEventListener('DOMContentLoaded', function() {
             options: {
                 ...defaultChartOptions,
                 indexAxis: 'y',
+                plugins: {
+                    ...defaultChartOptions.plugins,
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return context.dataset.label + ': ' + context.raw + '%';
+                            }
+                        },
+                        titleColor: '#000',
+                        bodyColor: '#000',
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        borderColor: '#000',
+                        borderWidth: 1
+                    }
+                }
             }
         });
     }
@@ -227,9 +285,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Metodologías & Buenas Prácticas (Polar Area Chart)
     const methodologiesData = [
         { label: 'Agile / Scrum', value: 90 },
-        { label: 'Arquitectura Limpia & Componentes Reutilizables', value: 88 },
-        { label: 'Resolución de Problemas Complejos', value: 92 },
-        { label: 'Diseño y Consumo de APIs & Microservicios', value: 85 }
+        { label: 'Arquitectura Limpia & Componentes Reutilizables', value: 90 },
+        { label: 'Resolución de Problemas Complejos', value: 90 },
+        { label: 'Diseño y Consumo de APIs & Microservicios', value: 95 }
     ];
     const methodologiesCanvas = document.getElementById('methodologiesChart');
     if (methodologiesCanvas) {
@@ -252,9 +310,25 @@ document.addEventListener('DOMContentLoaded', function() {
                     legend: {
                         display: true,
                         position: 'right',
-                        labels: { color: lighterText }
+                        labels: {
+                            color: '#000',
+                            font: {
+                                weight: 'bold'
+                            }
+                        }
                     },
-                    tooltip: defaultChartOptions.plugins.tooltip
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return context.dataset.label + ': ' + context.raw + '%';
+                            }
+                        },
+                        titleColor: '#000',
+                        bodyColor: '#000',
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        borderColor: '#000',
+                        borderWidth: 1
+                    }
                 },
                 scales: {
                     r: {

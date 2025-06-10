@@ -1,0 +1,171 @@
+/*====================
+  Variables y Estilos Generales
+====================*/
+
+/* Importación de Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Variables de Color */
+:root {
+    --primary-color: #149ddd; /* Azul más profundo y profesional */
+    --secondary-color: #6c757d; /* Gris oscuro para elementos secundarios */
+    --accent-color: #00bcd4; /* Un azul cian vibrante para acentos sutiles */
+    --text-color: #444444; /* Texto principal un poco más suave */
+    --heading-color: #333333; /* Color específico para los títulos */
+    --light-bg-color: #f7f7f7; /* Fondo claro para secciones alternas */
+    --dark-bg-color: #343a40; /* Fondo oscuro para secciones */
+    --white-color: #ffffff;
+    --gray-color: #6c757d;
+}
+
+/* Estilos para el Cuerpo y Diseño Principal */
+body {
+    font-family: 'Inter', sans-serif; /* Fuente moderna y legible para el cuerpo */
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--white-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ajuste para el contenido principal debajo de la barra de navegación fija */
+main {
+    padding-top: 120px; /* Ajustado para la navegación fija */
+}
+
+/* Estilos para Títulos (h1-h6) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif; /* Fuente moderna y profesional para títulos */
+    color: var(--heading-color);
+    font-weight: 700; /* Negrita para títulos */
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em; /* Ajuste sutil del espaciado entre letras */
+}
+
+/* Estilos generales para secciones */
+section {
+    padding: 20px 0; /* Espaciado ajustado para cada sección */
+    overflow: hidden; /* Para manejar animaciones y elementos salientes */
+}
+
+section.bg-light {
+    background-color: var(--light-bg-color) !important; /* Asegura que el color de fondo claro se aplique */
+}
+
+/* Estilos generales para Tarjetas */
+.card {
+    background-color: #f8f9fa; /* Fondo blanco suave para las tarjetas */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efecto de levantamiento al pasar el ratón */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Sombra más fuerte al pasar el ratón */
+}
+
+.card-title {
+    color: #333333; /* Color oscuro para los títulos de las tarjetas */
+    text-shadow: none;
+    margin-bottom: 1rem;
+}
+
+/* Unificación de estilos para textos dentro de las tarjetas */
+/* Aplica a párrafos, items de lista y texto en negrita dentro del cuerpo de la tarjeta */
+.card-text,
+.card-body p,
+.card-body ul li,
+.card-body ul li strong {
+    color: #555555 !important; /* Asegura un color de texto consistente y legible */
+    opacity: 1 !important;
+    text-shadow: none !important;
+}
+
+/* Estilos para Barras de Progreso */
+.progress {
+    height: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    background-color: var(--primary-color); /* Color primario para el progreso */
+    border-radius: 10px;
+}
+
+/* Estilos generales para botones */
+.btn-light {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-color: var(--primary-color);
+    font-weight: 600;
+    padding: 12px 35px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-light:hover {
+    background-color: #1a6da7; /* Un tono más oscuro al hover */
+    border-color: #1a6da7;
+    color: var(--white-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-light {
+    color: var(--white-color);
+    border-color: var(--white-color);
+    font-weight: 600;
+    padding: 12px 35px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-outline-light:hover {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos generales para el Footer */
+
+/* Footer */
+footer {
+    background-color: var(--dark-bg-color);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 30px 0;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+
+footer a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Media Queries para Responsividad General */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1.5rem;
+    }
+} 
