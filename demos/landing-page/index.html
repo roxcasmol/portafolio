@@ -25,9 +25,18 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavLanding">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#home-landing">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#home-landing" data-translate="navbar_home">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services" data-translate="navbar_services">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-translate="navbar_contact">Contacto</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="language-flag" data-translate="language_selector">🇪🇸</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item lang-switcher" href="#" data-lang="es" data-translate="language_es">Español</a></li>
+                            <li><a class="dropdown-item lang-switcher" href="#" data-lang="en" data-translate="language_en">English</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -36,8 +45,8 @@
     <!-- Nuevo Header/Hero Section para la Landing Page -->
     <header id="home-landing" class="landing-hero-section text-white text-center py-5 d-flex align-items-center justify-content-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">Conectando Código y Hardware</h1>
-            <p class="lead mb-0">Explorando el Paisaje Digital Futurista</p>
+            <h1 class="display-4 fw-bold" data-translate="hero_title"></h1>
+            <p class="lead mb-0" data-translate="hero_subtitle"></p>
         </div>
     </header>
 
@@ -45,82 +54,81 @@
     <section class="circular-carousel-container">
         <div class="carousel-wrapper">
             <div class="carousel-item-custom">
-                <img src="assets/img/carousel-1.jpg" alt="Interconectividad de Sistemas">
+                <img src="assets/img/carousel-1.jpg" alt="" data-translate="carousel_alt_1">
                 <div class="caption">
-                    <h5>Interconectividad de Sistemas</h5>
-                    <p>Diseño de arquitecturas que enlazan cada componente digital.</p>
+                    <h5 data-translate="carousel_title_1"></h5>
+                    <p data-translate="carousel_desc_1"></p>
                 </div>
             </div>
             <div class="carousel-item-custom">
-                <img src="assets/img/carousel-2.jpg" alt="Flujo de Datos Optimizado">
+                <img src="assets/img/carousel-2.jpg" alt="" data-translate="carousel_alt_2">
                 <div class="caption">
-                    <h5>Flujo de Datos Optimizado</h5>
-                    <p>Canalizando la información con eficiencia para decisiones rápidas.</p>
+                    <h5 data-translate="carousel_title_2"></h5>
+                    <p data-translate="carousel_desc_2"></p>
                 </div>
             </div>
             <div class="carousel-item-custom">
-                <img src="assets/img/carousel-3.jpg" alt="Innovación en el Hardware">
+                <img src="assets/img/carousel-3.jpg" alt="" data-translate="carousel_alt_3">
                 <div class="caption">
-                    <h5>Innovación en el Hardware</h5>
-                    <p>Integrando componentes de vanguardia para rendimiento superior.</p>
+                    <h5 data-translate="carousel_title_3"></h5>
+                    <p data-translate="carousel_desc_3"></p>
                 </div>
             </div>
             <div class="carousel-item-custom">
-                <img src="assets/img/carousel-4.jpg" alt="Desarrollo de Software Escalable">
+                <img src="assets/img/carousel-4.jpg" alt="" data-translate="carousel_alt_4">
                 <div class="caption">
-                    <h5>Desarrollo de Software Escalable</h5>
-                    <p>Construyendo código robusto que crece con tus ambiciones.</p>
+                    <h5 data-translate="carousel_title_4"></h5>
+                    <p data-translate="carousel_desc_4"></p>
                 </div>
             </div>
             <div class="carousel-item-custom">
-                <img src="assets/img/carousel-5.jpg" alt="Inteligencia Artificial Integrada">
+                <img src="assets/img/carousel-5.jpg" alt="" data-translate="carousel_alt_5">
                 <div class="caption">
-                    <h5>Inteligencia Artificial Integrada</h5>
-                    <p>Soluciones inteligentes que automatizan y optimizan procesos.</p>
+                    <h5 data-translate="carousel_title_5"></h5>
+                    <p data-translate="carousel_desc_5"></p>
                 </div>
             </div>
             <div class="carousel-item-custom">
-                <img src="assets/img/carousel-6.jpg" alt="Ciberseguridad Proactiva">
+                <img src="assets/img/carousel-6.jpg" alt="" data-translate="carousel_alt_6">
                 <div class="caption">
-                    <h5>Ciberseguridad Proactiva</h5>
-                    <p>Protegiendo tu infraestructura digital contra amenazas del futuro.</p>
+                    <h5 data-translate="carousel_title_6"></h5>
+                    <p data-translate="carousel_desc_6"></p>
                 </div>
             </div>
             <div class="carousel-item-custom">
-                <img src="assets/img/carousel-7.jpg" alt="Realidad Extendida y Simulación">
+                <img src="assets/img/carousel-7.jpg" alt="" data-translate="carousel_alt_7">
                 <div class="caption">
-                    <h5>Realidad Extendida y Simulación</h5>
-                    <p>Creando experiencias inmersivas que difuminan la línea entre lo real y lo digital.</p>
+                    <h5 data-translate="carousel_title_7"></h5>
+                    <p data-translate="carousel_desc_7"></p>
                 </div>
             </div>
-           
         </div>
     </section>
 
     <!-- Sección de Servicios / Bloques de Texto e Íconos -->
     <section id="services" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Nuestros Núcleos de Servicio</h2>
+            <h2 class="text-center mb-5" data-translate="services_title"></h2>
             <div class="row text-center">
                 <div class="col-md-4 mb-4">
                     <div class="service-block p-4 border rounded">
                         <i class="fas fa-microchip fa-3x text-primary mb-3"></i>
-                        <h4>Arquitectura de Sistemas Conectados</h4>
-                        <p>Diseñamos plataformas donde cada línea de código y cada chip se entrelazan para una operatividad fluida.</p>
+                        <h4 data-translate="service_1_title"></h4>
+                        <p data-translate="service_1_desc"></p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="service-block p-4 border rounded">
                         <i class="fas fa-stream fa-3x text-primary mb-3"></i>
-                        <h4>Optimización de Flujo de Datos</h4>
-                        <p>Aseguramos que la información fluya a través de tus circuitos digitales, entregando datos cruciales a la velocidad del pensamiento.</p>
+                        <h4 data-translate="service_2_title"></h4>
+                        <p data-translate="service_2_desc"></p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="service-block p-4 border rounded">
                         <i class="fas fa-robot fa-3x text-primary mb-3"></i>
-                        <h4>Soluciones de Innovación Futurista</h4>
-                        <p>Desde la automatización con scripts hasta la integración de IA, creamos soluciones que anticipan el futuro digital.</p>
+                        <h4 data-translate="service_3_title"></h4>
+                        <p data-translate="service_3_desc"></p>
                     </div>
                 </div>
             </div>
@@ -130,24 +138,24 @@
     <!-- Sección de Formulario de Contacto -->
     <section id="contact" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Inicia tu Transformación Digital</h2>
+            <h2 class="text-center mb-5" data-translate="contact_title"></h2>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <p class="lead text-center mb-4">¿Listo para conectar tu visión con el futuro? Cuéntanos sobre tu proyecto. Estamos aquí para construir el mañana digital.</p>
+                    <p class="lead text-center mb-4" data-translate="contact_subtitle"></p>
                     <form>
                         <div class="mb-3">
-                            <label for="name" class="form-label">Nombre</label>
+                            <label for="name" class="form-label" data-translate="contact_name_label"></label>
                             <input type="text" class="form-control" id="name" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <label for="email" class="form-label" data-translate="contact_email_label"></label>
                             <input type="email" class="form-control" id="email" required>
                         </div>
                         <div class="mb-3">
-                            <label for="message" class="form-label">Mensaje</label>
+                            <label for="message" class="form-label" data-translate="contact_message_label"></label>
                             <textarea class="form-control" id="message" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-lg w-100">Enviar</button>
+                        <button type="submit" class="btn btn-primary btn-lg w-100" data-translate="contact_submit"></button>
                     </form>
                 </div>
             </div>
@@ -157,19 +165,18 @@
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
-            <p>&copy; 2025 Roxana Castillo. Todos los derechos reservados.</p>
-            <div class="social-links mt-3">
-                <a href="#" class="text-white mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fab fa-github fa-2x"></i></a>
-                <!-- Añade más enlaces a redes sociales si lo deseas -->
-            </div>
+            <p>&copy; 2025 Roxana Castillo. <span data-translate="footer_copyright"></span></p>         
         </div>
     </footer>
 
-    <!-- Bootstrap JS Bundle (popper incluido) -->
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"></script>
 
     <!-- Custom JS for Landing Page -->
+    <script src="js/translation.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

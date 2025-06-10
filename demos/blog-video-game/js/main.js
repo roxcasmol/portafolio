@@ -1,3 +1,8 @@
+// Inicializar el idioma por defecto cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+    changeLanguage('en');
+});
+
 // Funcionalidad del botón de búsqueda
 document.querySelector('.input-search i').addEventListener('click', () => {
     const searchInput = document.querySelector('.input-search input');
@@ -37,3 +42,29 @@ document.querySelectorAll('.btn').forEach(button => {
         console.log('Mostrando contenido completo');
     });
 }); 
+
+// Función para cambiar el idioma
+function changeLanguage(lang) {
+    // Verificar que el idioma existe en las traducciones
+    if (!translations[lang]) {
+        console.error(`El idioma ${lang} no está disponible`);
+        return;
+    }
+
+    // Actualizar todos los elementos con el atributo data-translate
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            if (element.tagName === 'INPUT') {
+                element.placeholder = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        } else {
+            console.warn(`No se encontró la traducción para la clave "${key}" en el idioma ${lang}`);
+        }
+    });
+
+    // Actualizar el atributo lang del documento
+    document.documentElement.lang = lang;
+}

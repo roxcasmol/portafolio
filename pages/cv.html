@@ -11,10 +11,8 @@
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" href="css/cv-styles.css">
     <link rel="stylesheet" href="../css/navbar.css">
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha512-Fo3rlalHpgc5X00CjE+25y+8w/20z0x+7F8z+2D5+8w/20z0x+7F8z+2D5" crossorigin="anonymous"
-        referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/cv.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap"
@@ -25,19 +23,28 @@
     <!-- Navbar fijo superior (similar al portafolio principal) -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#home">Roxana Castillo</a>
+            <a class="navbar-brand" href="../index.html#home">Roxana Castillo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html#home">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#sobre-mi">Sobre mí</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#demos">Demos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#habilidades">Habilidades</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cv.html">Currículum</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#home" data-translate="navbar_home"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#sobre-mi" data-translate="navbar_about"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#demos" data-translate="navbar_demos"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#habilidades" data-translate="navbar_skills"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html" data-translate="navbar_resume"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#contacto" data-translate="navbar_contact"></a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="language-flag" data-translate="language_selector">🇪🇸</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item lang-switcher" href="#" data-lang="es" data-translate="language_es">Español</a></li>
+                            <li><a class="dropdown-item lang-switcher" href="#" data-lang="en" data-translate="language_en">English</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -45,7 +52,7 @@
 
     <main class="container mt-5 pt-5">
         <section id="top" class="py-5 text-center">
-            <h1 class="display-4 fw-bold">Currículum Vitae</h1>
+            <h1 class="display-4 fw-bold" data-translate="cv_title"></h1>
         </section>
 
         <div class="row justify-content-center">
@@ -53,30 +60,21 @@
                 <!-- Perfil -->
                 <section class="card mb-4 shadow-sm">
                     <div class="card-body">
-                        <h3 class="card-title text-primary">Perfil</h3>
-                        <p class="card-text">Soy una desarrolladora de software apasionada, con amplia experiencia en
-                            tecnologías modernas del desarrollo web. He trabajado con PHP, Node.js, Angular, JavaScript,
-                            CSS, HTML y desarrollo de plugins avanzados para Moodle. Me especializo en el diseño de
-                            soluciones escalables y eficientes, integrando bases de datos relacionales (MySQL) y no
-                            relacionales (MongoDB), y desarrollando funcionalidades complejas dentro de plataformas
-                            educativas.</p>
-                        <p class="card-text">Mi trabajo destaca por la calidad del código, el enfoque centrado en el
-                            usuario y la capacidad de adaptación a diversos entornos tecnológicos. Soy una profesional
-                            autodidacta, enfocada en el aprendizaje continuo, y comprometida con la excelencia técnica.
-                            Tengo habilidades para colaborar en equipos multidisciplinarios y aportar valor a proyectos
-                            complejos.</p>
+                        <h3 class="card-title text-primary" data-translate="cv_profile_title"></h3>
+                        <p class="card-text" data-translate="cv_profile_desc1"></p>
+                        <p class="card-text" data-translate="cv_profile_desc2"></p>
                     </div>
                 </section>
 
                 <!-- Datos Personales -->
                 <section class="card mb-4 shadow-sm">
                     <div class="card-body">
-                        <h3 class="card-title text-primary">Datos Personales</h3>
+                        <h3 class="card-title text-primary" data-translate="cv_personal_data_title"></h3>
                         <ul class="list-unstyled">
-                            <li><strong>Nombre:</strong> Roxana Castillo</li>
-                            <li><strong>Correo electrónico:</strong> rox.cas.mol@gmail.com</li>
-                            <li><strong>Teléfono:</strong> +1 239 737 7289</li>
-                            <li><strong>Dirección:</strong> Naples, Florida, Estados Unidos</li>
+                            <li><strong data-translate="cv_name_label"></strong> Roxana Castillo</li>
+                            <li><strong data-translate="cv_email_label"></strong> rox.cas.mol@gmail.com</li>
+                            <li><strong data-translate="cv_phone_label"></strong> +1 239 737 7289</li>
+                            <li><strong data-translate="cv_address_label"></strong> Naples, Florida, Estados Unidos</li>
                         </ul>
                     </div>
                 </section>
@@ -84,17 +82,16 @@
                 <!-- Formación Académica -->
                 <section class="card mb-4 shadow-sm">
                     <div class="card-body">
-                        <h3 class="card-title text-primary">Formación Académica</h3>
-                        <h5>Universidad Tecnológica de La Habana "José Antonio Echeverría" (CUJAE), Cuba</h5>
-                        <p style="color: #FFFFFF !important; opacity: 1 !important;">Título: Ingeniería en Ciencias
-                            Informáticas</p>
+                        <h3 class="card-title text-primary" data-translate="cv_education_title"></h3>
+                        <h5 data-translate="cv_university_name"></h5>
+                        <p style="color: #FFFFFF !important; opacity: 1 !important;" data-translate="cv_degree_title"></p>
                     </div>
                 </section>
 
                 <!-- Cursos Completados -->
                 <section class="card mb-4 shadow-sm">
                     <div class="card-body">
-                        <h3 class="card-title text-primary">Cursos</h3>
+                        <h3 class="card-title text-primary" data-translate="cv_courses_title"></h3>
                         <div class="row row-cols-1 row-cols-md-2 g-4">
                             <div class="col">
                                 <div class="card h-100 bg-dark text-white border-secondary">
@@ -117,126 +114,112 @@
                 <!-- Experiencia Profesional -->
                 <section id="experiencia" class="section">
                     <div class="container">
-                        <h2 class="section-title">Experiencia Profesional</h2>
+                        <h2 class="section-title" data-translate="cv_experience_title"></h2>
                         <div class="timeline">
                             <ul>
                                 <li>
                                     <div class="content">
-                                        <h3>Desarrolladora Freelance vía Upwork</h3>
-                                        <h4>Aurainteractiva, México</h4>
-                                        <p>Especialización en el desarrollo y personalización de plugins avanzados para
-                                            Moodle, integrando servicios externos como Amazon Polly, ElevenLabs y AWS
-                                            QuickSight para funcionalidades innovadoras.</p>
-                                        <p class="tech-stack-text">Tecnologías: Moodle, Node.js, Angular, PHP, Docker
-                                        </p>
+                                        <h3 data-translate="exp_upwork_title"></h3>
+                                        <h4 data-translate="exp_upwork_company"></h4>
+                                        <p data-translate="exp_upwork_desc"></p>
+                                        <p class="tech-stack-text" data-translate="exp_upwork_tech"></p>
                                     </div>
                                     <div class="time">
-                                        <h4>Ago 2024 - Presente</h4>
+                                        <h4 data-translate="exp_upwork_date"></h4>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="content">
-                                        <h3>Desarrolladora Senior</h3>
-                                        <h4>Aurainteractiva, México</h4>
-                                        <p>Desarrollo de plugins para Moodle enfocados en mejorar la experiencia del
-                                            usuario y añadir funcionalidades personalizadas. Desarrollo de aplicaciones
-                                            web con tecnologías modernas.</p>
-                                        <p class="tech-stack-text">Tecnologías: Moodle, Node.js, Angular, JavaScript,
-                                            PHP</p>
+                                        <h3 data-translate="exp_senior_dev_title"></h3>
+                                        <h4 data-translate="exp_senior_dev_company"></h4>
+                                        <p data-translate="exp_senior_dev_desc"></p>
+                                        <p class="tech-stack-text" data-translate="exp_senior_dev_tech"></p>
                                     </div>
                                     <div class="time">
-                                        <h4>Nov 2022 - Jul 2024</h4>
+                                        <h4 data-translate="exp_senior_dev_date"></h4>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="content">
-                                        <h3>Desarrolladora de Software Freelance</h3>
-                                        <h4>Aurainteractiva, Cuba</h4>
-                                        <p>Colaboración en diversos proyectos de desarrollo de software, consolidando
-                                            experiencia en soluciones web a medida.</p>
-                                        <p class="tech-stack-text">Tecnologías: PHP, JavaScript, HTML/CSS, MySQL</p>
+                                        <h3 data-translate="exp_freelance_dev_title"></h3>
+                                        <h4 data-translate="exp_freelance_dev_company"></h4>
+                                        <p data-translate="exp_freelance_dev_desc"></p>
+                                        <p class="tech-stack-text" data-translate="exp_freelance_dev_tech"></p>
                                     </div>
                                     <div class="time">
-                                        <h4>Sep 2015 - Nov 2022</h4>
+                                        <h4 data-translate="exp_freelance_dev_date"></h4>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="content">
-                                        <h3>Desarrolladora de Software</h3>
-                                        <h4>Njor Technology</h4>
-                                        <p>Participación en el desarrollo de aplicaciones utilizando React,
-                                            contribuyendo a la creación de interfaces de usuario dinámicas.</p>
-                                        <p class="tech-stack-text">Tecnologías: React, JavaScript, HTML/CSS</p>
+                                        <h3 data-translate="exp_njor_title"></h3>
+                                        <h4 data-translate="exp_njor_company"></h4>
+                                        <p data-translate="exp_njor_desc"></p>
+                                        <p class="tech-stack-text" data-translate="exp_njor_tech"></p>
                                     </div>
                                     <div class="time">
-                                        <h4>2017</h4>
+                                        <h4 data-translate="exp_njor_date"></h4>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="content">
-                                        <h3>Desarrolladora de Software</h3>
-                                        <h4>Centro de Neurociencias de Cuba</h4>
-                                        <p>Desarrollo y soporte de software con Symfony y Entity Framework.
-                                            Procesamiento de datos con MATLAB y administración de redes.</p>
-                                        <p class="tech-stack-text">Tecnologías: Symfony, Entity Framework, MATLAB, Redes
-                                        </p>
+                                        <h3 data-translate="exp_cneuro_title"></h3>
+                                        <h4 data-translate="exp_cneuro_company"></h4>
+                                        <p data-translate="exp_cneuro_desc"></p>
+                                        <p class="tech-stack-text" data-translate="exp_cneuro_tech"></p>
                                     </div>
                                     <div class="time">
-                                        <h4>2012 - 2019</h4>
+                                        <h4 data-translate="exp_cneuro_date"></h4>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="content">
-                                        <h3>Desarrolladora de Software</h3>
-                                        <h4>Laemar</h4>
-                                        <p>Creación y mantenimiento de aplicaciones de gestión para optimizar
-                                            operaciones aéreas y marítimas.</p>
-                                        <p class="tech-stack-text">Tecnologías: Visual Basic, SQL Server</p>
+                                        <h3 data-translate="exp_laemar_title"></h3>
+                                        <h4 data-translate="exp_laemar_company"></h4>
+                                        <p data-translate="exp_laemar_desc"></p>
+                                        <p class="tech-stack-text" data-translate="exp_laemar_tech"></p>
                                     </div>
                                     <div class="time">
-                                        <h4>2010 - 2013</h4>
+                                        <h4 data-translate="exp_laemar_date"></h4>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="content">
-                                        <h3>Programadora Web</h3>
-                                        <h4>Casa del Pedagogo</h4>
-                                        <p>Desarrollo de soluciones web enfocadas en la educación, mejorando la gestión
-                                            de contenidos y la interacción de usuarios.</p>
-                                        <p class="tech-stack-text">Tecnologías: PHP, HTML/CSS, MySQL</p>
+                                        <h3 data-translate="exp_pedagogo_title"></h3>
+                                        <h4 data-translate="exp_pedagogo_company"></h4>
+                                        <p data-translate="exp_pedagogo_desc"></p>
+                                        <p class="tech-stack-text" data-translate="exp_pedagogo_tech"></p>
                                     </div>
                                     <div class="time">
-                                        <h4>2009 - 2010</h4>
+                                        <h4 data-translate="exp_pedagogo_date"></h4>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="content">
-                                        <h3>Profesora de Computación</h3>
-                                        <h4>Escuela Primaria Vicente Ponce Carrasco</h4>
-                                        <p>Enseñanza de conceptos básicos de computación a estudiantes de primaria,
-                                            fomentando el interés por la tecnología.</p>
+                                        <h3 data-translate="exp_primaria_title"></h3>
+                                        <h4 data-translate="exp_primaria_company"></h4>
+                                        <p data-translate="exp_primaria_desc"></p>
                                     </div>
                                     <div class="time">
-                                        <h4>2008 - 2009</h4>
+                                        <h4 data-translate="exp_primaria_date"></h4>
                                     </div>
                                 </li>
 
                                 <li>
                                     <div class="content">
-                                        <h3>Profesora de Programación</h3>
-                                        <h4>Instituto Superior Politécnico Pable de la Torriente Brau</h4>
-                                        <p>Formación de futuros profesionales en programación, impartiendo conocimientos
-                                            fundamentales en el área.</p>
+                                        <h3 data-translate="exp_politecnico_title"></h3>
+                                        <h4 data-translate="exp_politecnico_company"></h4>
+                                        <p data-translate="exp_politecnico_desc"></p>
                                     </div>
                                     <div class="time">
-                                        <h4>2006 - 2008</h4>
+                                        <h4 data-translate="exp_politecnico_date"></h4>
                                     </div>
                                 </li>
 
@@ -249,47 +232,55 @@
                 <!-- Competencias Técnicas -->
                 <section class="card mb-4 shadow-sm">
                     <div class="card-body">
-                        <h3 class="card-title text-primary">Competencias Técnicas</h3>
-
-                        <h4 class="mt-4">Lenguajes de Programación</h4>
+                        <h3 class="card-title text-primary" data-translate="cv_tech_skills_title"></h3>
+                        
+                        <h4 class="mt-4" data-translate="cv_languages_title"></h4>
                         <div style="height: 300px;">
                             <canvas id="languagesChart"></canvas>
                         </div>
 
                         <div class="row mt-4">
                             <div class="col-md-6">
-                                <h4>Frameworks & Librerías</h4>
+                                <h4 data-translate="cv_frameworks_title"></h4>
                                 <div style="height: 300px;">
                                     <canvas id="frameworksChart"></canvas>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <h4>Bases de Datos</h4>
+                                <h4 data-translate="cv_databases_title"></h4>
                                 <div style="height: 300px;">
                                     <canvas id="databasesChart"></canvas>
                                 </div>
                             </div>
                         </div>
 
-                        <h4 class="mt-4">Herramientas & Plataformas</h4>
+                        <h4 class="mt-4" data-translate="cv_tools_platforms_title"></h4>
                         <div style="height: 300px;">
                             <canvas id="toolsChart"></canvas>
                         </div>
 
-                        <h4 class="mt-4">Metodologías & Buenas Prácticas</h4>
+                        <h4 class="mt-4" data-translate="cv_methodologies_title"></h4>
                         <div style="height: 300px;">
                             <canvas id="methodologiesChart"></canvas>
                         </div>
+
+                        <h4 class="mt-4" data-translate="cv_additional_skills_title"></h4>
+                        <ul class="list-unstyled mt-3">
+                            <li data-translate="cv_proactivity"></li>
+                            <li data-translate="cv_focus_results"></li>
+                            <li data-translate="cv_problem_solving"></li>
+                            <li data-translate="cv_collaboration"></li>
+                        </ul>
                     </div>
                 </section>
 
                 <!-- Idiomas -->
                 <section class="card mb-4 shadow-sm">
                     <div class="card-body">
-                        <h3 class="card-title text-primary">Idiomas</h3>
+                        <h3 class="card-title text-primary" data-translate="cv_languages_title"></h3>
                         <ul class="list-unstyled">
-                            <li><strong>Español:</strong> Nativo</li>
-                            <li><strong>Inglés:</strong> Intermedio (lectura y comprensión técnica avanzada)</li>
+                            <li><strong data-translate="cv_native_language"></strong></li>
+                            <li><strong data-translate="cv_intermediate_language"></strong></li>
                         </ul>
                     </div>
                 </section>
@@ -297,24 +288,11 @@
                 <!-- Pasatiempos e Intereses -->
                 <section class="card mb-4 shadow-sm">
                     <div class="card-body">
-                        <h3 class="card-title text-primary">Pasatiempos e Intereses</h3>
+                        <h3 class="card-title text-primary" data-translate="cv_hobbies_title"></h3>
                         <ul class="list-unstyled">
-                            <li>Desarrollo de proyectos personales en web, automatización y e-learning</li>
-                            <li>Aprendizaje continuo de nuevas tecnologías</li>
-                            <li>Estilo de vida saludable y fitness</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <!-- Aptitudes Adicionales -->
-                <section class="card mb-4 shadow-sm">
-                    <div class="card-body">
-                        <h3 class="card-title text-primary">Aptitudes Adicionales</h3>
-                        <ul class="list-unstyled">
-                            <li>Proactividad y autonomía en entornos remotos</li>
-                            <li>Enfoque en resultados y mejora continua</li>
-                            <li>Capacidad de análisis y resolución de problemas técnicos complejos</li>
-                            <li>Colaboración y comunicación efectiva en equipos distribuidos</li>
+                            <li data-translate="cv_hobbies_1"></li>
+                            <li data-translate="cv_hobbies_2"></li>
+                            <li data-translate="cv_hobbies_3"></li>
                         </ul>
                     </div>
                 </section>
@@ -323,26 +301,26 @@
         </div>
     </main>
 
-    <!-- Footer (similar al portafolio principal) -->
-    <footer>
+    <footer class="text-center py-4 mt-5">
         <div class="container">
-            <div class="copyright">
-                &copy; 2025 <strong><span>Roxana Castillo</span></strong>. Todos los derechos reservados
+            <p>&copy; 2024 Roxana Castillo. <span data-translate="footer_copyright"></span></p>
+            <div class="social-icons mt-3">
+                <a href="https://github.com/roxcasmol" target="_blank" class="text-white mx-2"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/roxcasmol" target="_blank" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+              
             </div>
-
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/translation.js"></script>
     <script src="js/main.js"></script>
+    <script src="../js/translation.js"></script>
     <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <!-- Custom JS -->
     <script src="js/cv.js"></script>
-
 </body>
 
 </html>

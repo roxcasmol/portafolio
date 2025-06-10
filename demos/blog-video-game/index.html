@@ -12,6 +12,12 @@
      <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
 </head>
 <body>
+     <!-- Selector de idioma -->
+     <div class="language-selector">
+          <button onclick="changeLanguage('es')">ES</button>
+          <button onclick="changeLanguage('en')">EN</button>
+     </div>
+
      <!-- Boton de ir arriba -->
      <a href="#home" class="btn-top"><span class="fas fa-angle-up"></span></a>
 
@@ -40,15 +46,15 @@
                     </div>
                     <div class="col-12 col-md-5">
                          <div class="input-search">
-                              <input type="text" name="" id="" placeholder="¿Qué deseas buscar?">
+                              <input type="text" name="" id="" data-translate="searchPlaceholder" placeholder="¿Qué deseas buscar?">
                               <i class="fas fa-search"></i>
                          </div>
                     </div>
                     <div class="col-12 col-md-4">
                          <div class="enlaces d-flex justify-content-center justify-content-md-end">
-                              <a href="#destacados">Destacados</a>
-                              <a href="#articulos">Articulos</a>
-                              <a href="#gallery">Multimedia</a>
+                              <a href="#destacados" data-translate="destacados">Destacados</a>
+                              <a href="#articulos" data-translate="articulos">Articulos</a>
+                              <a href="#gallery" data-translate="multimedia">Multimedia</a>
                          </div>
                     </div>
                </div>
@@ -61,10 +67,10 @@
                <div class="row align-items-center">
                     <div class="col-12 col-lg-6">
                          <div class="content-header">
-                              <span class="badge">Nuevo</span>
-                              <h3>Resident Evil Village el más descargado</h3>
-                              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil in et quae eveniet optio officiis explicabo maiores, cum ipsa voluptatem, sed vitae porro! Ea nemo expedita sapiente cumque veritatis perspiciatis.</p>
-                              <button class="btn">Leer más</button>
+                              <span class="badge" data-translate="nuevo">Nuevo</span>
+                              <h3 data-translate="headerTitle">Resident Evil Village el más descargado</h3>
+                              <p data-translate="headerText">Resident Evil Village ha superado todas las expectativas, convirtiéndose en el juego más descargado del mes. Con su impresionante gráfica y jugabilidad mejorada, los jugadores están disfrutando de una experiencia de terror única.</p>
+                              <button class="btn" data-translate="leerMas">Leer más</button>
                          </div>
                     </div>
                     <div class="col-12 col-lg-6">
@@ -81,9 +87,9 @@
                     <div class="col-12 col-md-6">
                          <div class="game">
                               <div class="content">
-                                   <h2>Crash Bandicoot 4</h2>
-                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam libero mollitia officia expedita ipsam itaque consequuntur adipisci.</p>
-                                   <a href="#">Leer más</a>
+                                   <h2 data-translate="crashTitle">Crash Bandicoot 4</h2>
+                                   <p data-translate="crashText">El marsupial más famoso de PlayStation regresa con una nueva aventura llena de acción, plataformas y desafíos que pondrán a prueba tus habilidades.</p>
+                                   <a href="#" data-translate="leerMas">Leer más</a>
                               </div>
                               <img src="img/game2.png" alt="">
                          </div>
@@ -91,9 +97,9 @@
                     <div class="col-12 col-md-6">
                          <div class="game">
                               <div class="content">
-                                   <h2>Uncharted 4</h2>
-                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam libero mollitia officia expedita ipsam itaque consequuntur adipisci.</p>
-                                   <a href="#">Leer más</a>
+                                   <h2 data-translate="unchartedTitle">Uncharted 4</h2>
+                                   <p data-translate="unchartedText">Nathan Drake emprende su última aventura en busca del tesoro perdido del pirata Henry Avery, en un viaje que lo llevará por todo el mundo.</p>
+                                   <a href="#" data-translate="leerMas">Leer más</a>
                               </div>
                               <img src="img/game3.png" alt="">
                          </div>
@@ -101,9 +107,9 @@
                     <div class="col-12 col-md-6">
                          <div class="game">
                               <div class="content">
-                                   <h2>God of war</h2>
-                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam libero mollitia officia expedita ipsam itaque consequuntur adipisci.</p>
-                                   <a href="#">Leer más</a>
+                                   <h2 data-translate="godOfWarTitle">God of war</h2>
+                                   <p data-translate="godOfWarText">Kratos y su hijo Atreus se embarcan en un viaje épico a través de los reinos nórdicos, enfrentando nuevos desafíos y descubriendo secretos del pasado.</p>
+                                   <a href="#" data-translate="leerMas">Leer más</a>
                               </div>
                               <img src="img/game4.png" alt="">
                          </div>
@@ -111,9 +117,9 @@
                     <div class="col-12 col-md-6">
                          <div class="game">
                               <div class="content">
-                                   <h2>Assassins creed Valhalla</h2>
-                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam libero mollitia officia expedita ipsam itaque consequuntur adipisci.</p>
-                                   <a href="#">Leer más</a>
+                                   <h2 data-translate="acValhallaTitle">Assassins creed Valhalla</h2>
+                                   <p data-translate="acValhallaText">Conviértete en Eivor, un guerrero vikingo que lidera a su clan en la conquista de Inglaterra durante la Edad Media.</p>
+                                   <a href="#" data-translate="leerMas">Leer más</a>
                               </div>
                               <img src="img/game5.png" alt="">
                          </div>
@@ -125,12 +131,12 @@
      <!-- Titulo de articulos -->
      <div id="articulos" class="title">
           <div class="container">
-               <h1>Blog</h1>
+               <h1 data-translate="blogTitle">Blog</h1>
                <div class="badget-container">
-                    <span class="badge">Tendencias</span>
-                    <span class="badge">Videojuegos</span>
-                    <span class="badge">Consolas</span>
-                    <span class="badge">Noticias</span>
+                    <span class="badge" data-translate="tendencias">Tendencias</span>
+                    <span class="badge" data-translate="videojuegos">Videojuegos</span>
+                    <span class="badge" data-translate="consolas">Consolas</span>
+                    <span class="badge" data-translate="noticias">Noticias</span>
                </div>      
           </div>
      </div>
@@ -146,9 +152,9 @@
                                         <img src="img/card1.jpg" alt="">
                                    </div>
                                    <div class="content">
-                                        <h3>Imagenes God of war Ragnarok</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ipsa laboriosam fugit in dolorem iste, quo dignissimos, odit nemo rem at ea id ipsam sed obcaecati architecto animi ullam nam?</p>
-                                        <a href="#" class="btn">Leer más</a>
+                                        <h3 data-translate="godOfWarArticle">Imagenes God of war Ragnarok</h3>
+                                        <p data-translate="godOfWarArticleText">Descubre las impresionantes imágenes del próximo God of War Ragnarok, que promete llevar la saga a nuevos niveles de épica y emoción.</p>
+                                        <a href="#" class="btn" data-translate="leerMas">Leer más</a>
                                    </div>
                               </div>
 
@@ -157,9 +163,9 @@
                                         <img src="img/game1.png" alt="">
                                    </div>
                                    <div class="content">
-                                        <h3>Exito en ventas</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ipsa laboriosam fugit in dolorem iste, quo dignissimos, odit nemo rem at ea id ipsam sed obcaecati architecto animi ullam nam?</p>
-                                        <a href="#" class="btn">Leer más</a>
+                                        <h3 data-translate="exitoventasTitle">Exito en ventas</h3>
+                                        <p data-translate="exitoventasText">Los últimos lanzamientos de PlayStation 5 han batido récords de ventas, demostrando el gran interés de los jugadores por la nueva generación.</p>
+                                        <a href="#" class="btn" data-translate="leerMas">Leer más</a>
                                    </div>
                               </div>
 
@@ -168,9 +174,9 @@
                                         <img src="img/card2.jpg" alt="">
                                    </div>
                                    <div class="content">
-                                        <h3>Juego gratuito del mes</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ipsa laboriosam fugit in dolorem iste, quo dignissimos, odit nemo rem at ea id ipsam sed obcaecati architecto animi ullam nam?</p>
-                                        <a href="#" class="btn">Leer más</a>
+                                        <h3 data-translate="gratismesTitle">Juego gratuito del mes</h3>
+                                        <p data-translate="gratismesText">PlayStation Plus ofrece este mes un título triple A completamente gratuito para sus suscriptores, ¡no te lo pierdas!</p>
+                                        <a href="#" class="btn" data-translate="leerMas">Leer más</a>
                                    </div>
                               </div>
 
@@ -179,9 +185,9 @@
                                         <img src="img/card3.jpeg" alt="">
                                    </div>
                                    <div class="content">
-                                        <h3>Nuevo contenido descargable</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ipsa laboriosam fugit in dolorem iste, quo dignissimos, odit nemo rem at ea id ipsam sed obcaecati architecto animi ullam nam?</p>
-                                        <a href="#" class="btn">Leer más</a>
+                                        <h3 data-translate="acvalhallaTitle">Nuevo contenido descargable</h3>
+                                        <p data-translate="acvalhallaText">Assassin's Creed Valhalla recibe su expansión más ambiciosa hasta la fecha, con nuevas regiones, armas y habilidades para explorar.</p>
+                                        <a href="#" class="btn" data-translate="leerMas">Leer más</a>
                                    </div>
                               </div>
 
@@ -190,9 +196,9 @@
                                         <img src="img/card4.jpg" alt="">
                                    </div>
                                    <div class="content">
-                                        <h3>Próxima actualización FIFA21</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ipsa laboriosam fugit in dolorem iste, quo dignissimos, odit nemo rem at ea id ipsam sed obcaecati architecto animi ullam nam?</p>
-                                        <a href="#" class="btn">Leer más</a>
+                                        <h3 data-translate="fifa21Title">Próxima actualización FIFA21</h3>
+                                        <p data-translate="fifa21Text">La próxima actualización de FIFA 21 traerá mejoras significativas en la jugabilidad y nuevos equipos y jugadores.</p>
+                                        <a href="#" class="btn" data-translate="leerMas">Leer más</a>
                                    </div>
                               </div>
 
@@ -201,9 +207,9 @@
                                         <img src="img/card5.jpg" alt="">
                                    </div>
                                    <div class="content">
-                                        <h3>Record en ventas</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ipsa laboriosam fugit in dolorem iste, quo dignissimos, odit nemo rem at ea id ipsam sed obcaecati architecto animi ullam nam?</p>
-                                        <a href="#" class="btn">Leer más</a>
+                                        <h3 data-translate="recordventasTitle">Record en ventas</h3>
+                                        <p data-translate="recordventasText">La industria de los videojuegos alcanza nuevos récords de ventas, superando todas las expectativas del mercado.</p>
+                                        <a href="#" class="btn" data-translate="leerMas">Leer más</a>
                                    </div>
                               </div>
                          </div>
@@ -211,12 +217,12 @@
                     <div class="col-12 col-lg-4">
                          <aside class="d-none d-lg-block">
                               <nav>
-                                   <a href="#godofwar">Imagenes God of war Ragnarok</a>
-                                   <a href="#exitoventas">Exito en ventas</a>
-                                   <a href="#gratismes">Juego gratuito del mes</a>
-                                   <a href="#acvalhalla">Nuevo contenido descargable</a>
-                                   <a href="#fifa21">Próxima actualizacion FIFA21</a>
-                                   <a href="#recordventas">Record en ventas</a>
+                                   <a href="#godofwar" data-translate="godOfWarArticle">Imagenes God of war Ragnarok</a>
+                                   <a href="#exitoventas" data-translate="exitoventasTitle">Exito en ventas</a>
+                                   <a href="#gratismes" data-translate="gratismesTitle">Juego gratuito del mes</a>
+                                   <a href="#acvalhalla" data-translate="acvalhallaTitle">Nuevo contenido descargable</a>
+                                   <a href="#fifa21" data-translate="fifa21Title">Próxima actualizacion FIFA21</a>
+                                   <a href="#recordventas" data-translate="recordventasTitle">Record en ventas</a>
                               </nav>
                          </aside>
                     </div>
@@ -289,12 +295,13 @@
           </div>
      </section>
 
-     
-
      <!-- Bootstrap JS -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="./js/translations.js"></script>
+     <script src="./js/main.js"></script>
+    
      <footer>
-          <p>&copy; 2024 Roxana Castillo. Todos los derechos reservados.</p>
+          <p data-translate="footerText">&copy; 2024 Roxana Castillo. Todos los derechos reservados.</p>
      </footer>
 </body>
 </html>

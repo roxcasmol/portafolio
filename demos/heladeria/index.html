@@ -21,16 +21,26 @@
                </button>
                <div class="collapse navbar-collapse" id="navbarNav">
                     <div class="enlaces navbar-nav me-auto mb-2 mb-lg-0">
-                         <a class="nav-link" href="#inicio">Inicio</a>
-                         <a class="nav-link" href="#sabores">Sabores</a>
-                         <a class="nav-link" href="#eventos">Eventos</a>
-                         <a class="nav-link" href="#lugar">Nosotros</a>
+                         <a class="nav-link" href="#inicio" data-translate="nav_home"></a>
+                         <a class="nav-link" href="#sabores" data-translate="nav_flavors"></a>
+                         <a class="nav-link" href="#eventos" data-translate="nav_events"></a>
+                         <a class="nav-link" href="#lugar" data-translate="nav_about" style="min-width: 85px;"></a>
                     </div>
           
                     <div class="sociales d-flex">
                          <a class="nav-link fab fa-facebook-f" href=""></a>
                          <a class="nav-link fab fa-twitter" href=""></a>
                          <a class="nav-link fab fa-instagram" href=""></a>
+                         <!-- Selector de idioma -->
+                         <div class="dropdown">
+                              <button class="btn btn-link nav-link dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                   <span class="language-flag">🇪🇸</span>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                                   <li><a class="dropdown-item language-switcher" href="#" data-lang="es"> 🇪🇸 es </a></li>
+                                   <li><a class="dropdown-item language-switcher" href="#" data-lang="en"> 🇺🇸 en </a></li>
+                              </ul>
+                         </div>
                     </div>
                </div>
           </div>
@@ -42,16 +52,14 @@
           <div class="container">
                <div class="row">
                     <div class="col-12 text-content full text-center text-md-start">
-                         <h3>#Helados</h3>
-                         <h2>Artesanal</h2>
-                         <h1>Helado</h1>
-                         <button class="btn light">Menú</button> 
+                         <h3 data-translate="header_hashtag"></h3>
+                         <h2 data-translate="header_artisanal"></h2>
+                         <h1 data-translate="header_icecream"></h1>
+                         <button class="btn light" data-translate="header_menu_btn"></button> 
                     </div>
                </div>
           </div>
      </header>
-
-
 
      <!-- Section sabores -->
      <section class="sabores" id="sabores">
@@ -61,24 +69,22 @@
 
                <div class="col-12 col-lg-6">
                     <div class="text-content lateral">
-                         <h1>NUESTROS SABORES</h1>
-                         <h3>¡Frescos y sabrosos!</h3>
-                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis enim, deserunt id eum, dignissimos illo assumenda, voluptatum similique repellat praesentium tenetur non sint expedita itaque voluptatem aperiam a ut fugiat!</p>
-                         <button class="btn dark">Menú</button>
+                         <h1 data-translate="flavors_title"></h1>
+                         <h3 data-translate="flavors_subtitle"></h3>
+                         <p data-translate="flavors_text"></p>
+                         <button class="btn dark" data-translate="flavors_btn"></button>
                     </div>
                </div>
           </div>
      </section>
 
-
-
      <!-- Section Especial-->
      <section class="especial full" id="especial">
           <div class="container text-center">
                <div class="text-content full">
-                    <h2>DISFRUTA</h2>
-                    <h1>LIBRE DE LACTOSA</h1>
-                    <button class="btn light">Menú</button>
+                    <h2 data-translate="special_title"></h2>
+                    <h1 data-translate="special_subtitle"></h1>
+                    <button class="btn light" data-translate="special_btn"></button>
                </div>
           </div>
      </section>
@@ -89,10 +95,10 @@
           <div class="row g-0 flex-column-reverse flex-lg-row">
                <div class="col-12 col-lg-6">
                     <div class="text-content lateral">
-                         <h1>Nuestro lugar</h1>
-                         <h3>¡Helado frente al mar!</h3>
-                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis enim, deserunt id eum, dignissimos illo assumenda, voluptatum similique repellat praesentium tenetur non sint expedita itaque voluptatem aperiam a ut fugiat!</p>
-                         <button class="btn dark">Leer más</button>
+                         <h1 data-translate="place_title"></h1>
+                         <h3 data-translate="place_subtitle"></h3>
+                         <p data-translate="place_text"></p>
+                         <button class="btn dark" data-translate="place_btn"></button>
                     </div>
                </div>
 
@@ -106,9 +112,9 @@
      <section class="eventos full" id="eventos">
           <div class="container text-center">
                <div class="text-content full">
-                    <h2>CATERING & MÁS</h2>
-                    <h1>eventOs</h1>
-                    <button class="btn light">Pide un deseo</button>
+                    <h2 data-translate="events_title"></h2>
+                    <h1 data-translate="events_subtitle"></h1>
+                    <button class="btn light" data-translate="events_btn"></button>
                </div>
           </div>
      </section>
@@ -122,10 +128,10 @@
 
                <div class="col-12 col-lg-6">
                     <div class="text-content lateral">
-                         <h1>POSTRES</h1>
-                         <h3>¡Helados y más!</h3>
-                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis enim, deserunt id eum, dignissimos illo assumenda, voluptatum similique repellat praesentium tenetur non sint expedita itaque voluptatem aperiam a ut fugiat!</p>
-                         <button class="btn dark">Menú</button>
+                         <h1 data-translate="desserts_title"></h1>
+                         <h3 data-translate="desserts_subtitle"></h3>
+                         <p data-translate="desserts_text"></p>
+                         <button class="btn dark" data-translate="desserts_btn"></button>
                     </div>
                </div>
           </div>
@@ -144,19 +150,19 @@
           <div class="container">
                <div class="row">
                     <div class="col-12 col-md-6 col-lg-4 items">
-                         <h2>Direccion</h2>
-                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi dolore saepe fugit quod maxime corrupti eligendi explicabo facere facilis hic, laborum expedita a. Vitae, eveniet esse maiores tempore officiis et.</p>
+                         <h2 data-translate="footer_address_title"></h2>
+                         <p data-translate="footer_address"></p>
                     </div>
 
                     <div class="col-12 col-md-6 col-lg-4 items">
-                         <h2>Horario</h2>
-                         <p>Todos los dias <br>10AM - 8PM</p>
+                         <h2 data-translate="footer_hours_title"></h2>
+                         <p data-translate="footer_hours"></p>
                     </div>
 
                     <div class="col-12 col-md-6 col-lg-4 items">
                          <div>
-                              <h2>Contacto</h2>
-                              <p>info@misitio.com <br>Tel: 914-123-456</p>
+                              <h2 data-translate="footer_contact_title"></h2>
+                              <p data-translate="footer_contact"></p>
                          </div>
                          
                          <div class="sociales">
@@ -172,9 +178,12 @@
 
      <!-- Footer copy -->
      <div class="copy">
-          <p> &copy; 2025 Roxana Castillo. Todos los derechos reservados</p>
+          <p>&copy; 2025 Roxana Castillo. <span data-translate="footer_copyright"></span></p>
      </div>
+
      <!-- Bootstrap JS -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <!-- Translation JS -->
+     <script src="js/translation.js"></script>
 </body>
 </html>

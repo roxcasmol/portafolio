@@ -36,12 +36,21 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#demos">Demos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/cv.html">Currículum</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#home" data-translate="navbar_home"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre-mi" data-translate="navbar_about"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#demos" data-translate="navbar_demos"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#habilidades" data-translate="navbar_skills"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/cv.html" data-translate="navbar_resume"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto" data-translate="navbar_contact"></a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="language-flag" data-translate="language_selector">🇪🇸</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item lang-switcher" href="#" data-lang="es" data-translate="language_es">Español</a></li>
+                            <li><a class="dropdown-item lang-switcher" href="#" data-lang="en" data-translate="language_en">English</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -51,10 +60,10 @@
     <header id="home" class="bg-primary text-white text-center py-5"
         style="background: url('assets/img/hero.jpg') center/cover no-repeat; margin-top: 56px;">
         <div class="container">
-            <h1 class="display-4 fw-bold">Roxana Castillo | Ingeniera de Software</h1>
-            <p class="lead mb-4">Transformando Ideas en Soluciones Digitales Robustas y Escalables</p>
-            <a href="#demos" class="btn btn-light btn-lg me-3">Ver Demos</a>
-            <a href="#contacto" class="btn btn-outline-light btn-lg">Contáctame</a>
+            <h1 class="display-4 fw-bold" data-translate="hero_title"></h1>
+            <p class="lead mb-4" data-translate="hero_subtitle"></p>
+            <a href="#demos" class="btn btn-light btn-lg me-3" data-translate="hero_view_demos"></a>
+            <a href="#contacto" class="btn btn-outline-light btn-lg" data-translate="hero_contact_me"></a>
         </div>
     </header>
 
@@ -63,27 +72,20 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 mb-4 mb-lg-0">
-                    <h2 class="text-center text-lg-start mb-4">Sobre Mí</h2>
-                    <p class="lead">Soy una desarrolladora de software apasionada, con amplia experiencia en tecnologías
-                        modernas del desarrollo web. He trabajado con PHP, Node.js, Angular, JavaScript, CSS, HTML y
-                        desarrollo de plugins avanzados para Moodle. Me especializo en el diseño de soluciones
-                        escalables y eficientes, integrando bases de datos relacionales (MySQL) y no relacionales
-                        (MongoDB), y desarrollando funcionalidades complejas dentro de plataformas educativas.</p>
-                    <p class="lead">Mi trabajo destaca por la calidad del código, el enfoque centrado en el usuario y la capacidad de
-                        adaptación a diversos entornos tecnológicos. Soy una profesional autodidacta, enfocada en el
-                        aprendizaje continuo, y comprometida con la excelencia técnica. Tengo habilidades para colaborar
-                        en equipos multidisciplinarios y aportar valor a proyectos complejos.</p>
-                    <h3 class="mt-5 mb-3">Datos Clave</h3>
+                    <h2 class="text-center text-lg-start mb-4" data-translate="about_title"></h2>
+                    <p class="lead" data-translate="about_description_part1"></p>
+                    <p class="lead" data-translate="about_description_part2"></p>
+                    <h3 class="mt-5 mb-3" data-translate="about_key_data"></h3>
                     <ul class="list-unstyled info-list">
-                        <li><i class="fas fa-envelope fa-fw me-2"></i><strong>Email:</strong> rox.cas.mol@gmail.com</li>
-                        <li><i class="fab fa-linkedin fa-fw me-2"></i><strong>LinkedIn:</strong> <a
+                        <li><i class="fas fa-envelope fa-fw me-2"></i><strong data-translate="about_email"></strong> rox.cas.mol@gmail.com</li>
+                        <li><i class="fab fa-linkedin fa-fw me-2"></i><strong data-translate="about_linkedin"></strong> <a
                                 href="https://www.linkedin.com/in/roxcasmol"
                                 target="_blank">linkedin.com/in/roxcasmol</a></li>
-                        <li><i class="fab fa-github fa-fw me-2"></i><strong>GitHub:</strong> <a
+                        <li><i class="fab fa-github fa-fw me-2"></i><strong data-translate="about_github"></strong> <a
                                 href="https://github.com/roxcasmol" target="_blank">github.com/roxcasmol</a></li>
-                        <li><i class="fas fa-map-marker-alt fa-fw me-2"></i><strong>Ubicación:</strong> Naples, Florida,
+                        <li><i class="fas fa-map-marker-alt fa-fw me-2"></i><strong data-translate="about_location"></strong> Naples, Florida,
                             Estados Unidos</li>
-                        <li><i class="fas fa-phone fa-fw me-2"></i><strong>Teléfono:</strong> +1 239 737 7289</li>
+                        <li><i class="fas fa-phone fa-fw me-2"></i><strong data-translate="about_phone"></strong> +1 239 737 7289</li>
                     </ul>
                 </div>
                 <div class="col-lg-4 text-center">
@@ -96,7 +98,7 @@
 
     <section id="demos" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Demos</h2>
+            <h2 class="text-center mb-5" data-translate="demos_title"></h2>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
                 <!-- Card de Proyecto para Landing Page Demo -->
@@ -107,11 +109,10 @@
                             <img src="assets/img/landing-page-screenshot.jpg" class="card-img-top"
                                 alt="Landing Page Demo">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-dark">Landing Page Demo</h5>
-                                <p class="card-text text-dark">Una demo de una landing page moderna y responsiva con un
-                                    carrusel circular interactivo y secciones de servicios.</p>
+                                <h5 class="card-title text-dark" data-translate="demos_landing_title"></h5>
+                                <p class="card-text text-dark" data-translate="demos_landing_description"></p>
                                 <div class="mt-auto">
-                                    <p class="card-text"><small class="text-muted">Tecnologías: <span
+                                    <p class="card-text"><small class="text-muted" data-translate="demos_landing_technologies"></small> <span
                                                 class="badge bg-primary">HTML</span> <span
                                                 class="badge bg-secondary">CSS</span> <span
                                                 class="badge bg-info">JavaScript</span> <span
@@ -133,11 +134,10 @@
                             <img src="assets/img/blog-video-game-screenshot.jpg" class="card-img-top"
                                 alt="Blog de Videojuegos Demo">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-dark">Blog de Videojuegos</h5>
-                                <p class="card-text text-dark">Un blog moderno dedicado a videojuegos con diseño
-                                    responsivo, sistema de categorías, búsqueda y sección de comentarios.</p>
+                                <h5 class="card-title text-dark" data-translate="demos_blog_title"></h5>
+                                <p class="card-text text-dark" data-translate="demos_blog_description"></p>
                                 <div class="mt-auto">
-                                    <p class="card-text"><small class="text-muted">Tecnologías: <span
+                                    <p class="card-text"><small class="text-muted" data-translate="demos_landing_technologies"></small> <span
                                                 class="badge bg-primary">HTML</span> <span
                                                 class="badge bg-secondary">CSS</span> <span
                                                 class="badge bg-info">JavaScript</span> <span
@@ -158,11 +158,10 @@
                         <div class="card h-100 shadow-sm">
                             <img src="assets/img/heladeria-screenshot.jpg" class="card-img-top" alt="Heladería Demo">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-dark">Heladería Artesanal</h5>
-                                <p class="card-text text-dark">Una página web moderna para una heladería artesanal con
-                                    menú interactivo, galería de sabores y sistema de pedidos online.</p>
+                                <h5 class="card-title text-dark" data-translate="demos_heladeria_title"></h5>
+                                <p class="card-text text-dark" data-translate="demos_heladeria_description"></p>
                                 <div class="mt-auto">
-                                    <p class="card-text"><small class="text-muted">Tecnologías: <span
+                                    <p class="card-text"><small class="text-muted" data-translate="demos_landing_technologies"></small> <span
                                                 class="badge bg-primary">HTML</span> <span
                                                 class="badge bg-secondary">CSS</span> <span
                                                 class="badge bg-info">JavaScript</span> <span
@@ -178,30 +177,20 @@
 
             </div>
             <div class="text-center mt-4" style="display: none;">
-                <a href="pages/alldemos.html" class="text-primary fw-bold" target="_blank">Ver Más Demos</a>                
+                <a href="pages/alldemos.html" class="text-primary fw-bold" target="_blank" data-translate="demos_more_demos"></a>                
             </div>
         </div>
     </section>
 
     <section id="casos" class="py-5" style="display: none;">
         <div class="container">
-            <h2 class="text-center mb-5">Mis Demos: Casos de Estudio y Exploración Técnica</h2>
+            <h2 class="text-center mb-5" data-translate="cases_title"></h2>
 
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <p class="lead mb-4">En esta sección, presento una serie de demos interactivos que he desarrollado
-                        para showcasing mis habilidades y explorar técnicas de vanguardia en desarrollo frontend. Cada
-                        demo está diseñado para ilustrar mi capacidad para transformar conceptos en soluciones
-                        funcionales, destacando mi dominio en áreas como diseño responsivo, manipulación del DOM,
-                        animaciones complejas con CSS y JavaScript, y la creación de experiencias de usuario
-                        innovadoras.</p>
-                    <p class="lead mb-5">Estos casos de estudio se centran en el 'cómo' detrás de cada demo, explicando
-                        los desafíos técnicos, las decisiones de diseño y las tecnologías aplicadas. Son una ventana a
-                        mi proceso de pensamiento y mi enfoque en la creación de interfaces interactivas y visualmente
-                        atractivas.</p>
-                    <p class="mb-5">Te invito a explorar mis <a href="#demos" class="text-primary fw-bold">Demos
-                            Destacados</a> para ver estas habilidades en acción y a contactarme si deseas discutir cómo
-                        puedo aplicar estas técnicas a tus proyectos.</p>
+                    <p class="lead mb-4" data-translate="cases_description_part1"></p>
+                    <p class="lead mb-5" data-translate="cases_description_part2"></p>
+                    <p class="mb-5" data-translate="cases_invitation"></p>
                 </div>
             </div>
             <!-- Aquí se añadirán casos de estudio detallados de proyectos reales en el futuro -->
@@ -211,13 +200,13 @@
 
     <section id="habilidades" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Mis Habilidades</h2>
+            <h2 class="text-center mb-5" data-translate="skills_title"></h2>
 
             <div class="row">
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card h-100 shadow-sm">
                         <div class="card-body">
-                            <h4 class="card-title text-primary">Lenguajes de Programación</h4>
+                            <h4 class="card-title text-primary" data-translate="skills_programming_title"></h4>
                             <ul class="list-unstyled mb-0">
                                 <li>PHP</li>
                                 <li>JavaScript</li>
@@ -233,7 +222,7 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card h-100 shadow-sm">
                         <div class="card-body">
-                            <h4 class="card-title text-primary">Frameworks & Librerías</h4>
+                            <h4 class="card-title text-primary" data-translate="skills_frameworks_title"></h4>
                             <ul class="list-unstyled mb-0">
                                 <li>Angular</li>
                                 <li>Node.js (Express)</li>
@@ -247,7 +236,7 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card h-100 shadow-sm">
                         <div class="card-body">
-                            <h4 class="card-title text-primary">Bases de Datos</h4>
+                            <h4 class="card-title text-primary" data-translate="skills_databases_title"></h4>
                             <ul class="list-unstyled mb-0">
                                 <li>MySQL</li>
                                 <li>MongoDB</li>
@@ -259,16 +248,14 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card h-100 shadow-sm">
                         <div class="card-body">
-                            <h4 class="card-title text-primary">Herramientas & Plataformas</h4>
+                            <h4 class="card-title text-primary" data-translate="skills_tools_title"></h4>
                             <ul class="list-unstyled mb-0">
-                                <li>Moodle (Desarrollo de Plugins)</li>
-                                <li>Docker</li>
-                                <li>Git / GitHub</li>
-                                <li>AWS (QuickSight, Polly, ElevenLabs)</li>
-                                <li>DevOps (CI/CD, Despliegue en Nube)</li>
-                                <li>Android (Desarrollo Móvil)</li>
-                                <li>iOS (Desarrollo Móvil)</li>
-                                <li>Inteligencia Artificial (IA) / Machine Learning (ML)</li>
+                                <li data-translate="skills_tools_ide"></li>
+                                <li data-translate="skills_tools_docker"></li>
+                                <li data-translate="skills_tools_aws"></li>
+                                <li data-translate="skills_tools_jenkins"></li>
+                                <li data-translate="skills_tools_jira"></li>
+                                <li data-translate="skills_tools_confluence"></li>
                             </ul>
                         </div>
                     </div>
@@ -276,12 +263,13 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card h-100 shadow-sm">
                         <div class="card-body">
-                            <h4 class="card-title text-primary">Metodologías & Buenas Prácticas</h4>
+                            <h4 class="card-title text-primary" data-translate="skills_methodologies_title"></h4>
                             <ul class="list-unstyled mb-0">
-                                <li>Agile / Scrum</li>
-                                <li>Arquitectura Limpia & Componentes Reutilizables</li>
-                                <li>Resolución de Problemas Complejos</li>
-                                <li>Diseño y Consumo de APIs & Microservicios</li>
+                                <li data-translate="skills_methodologies_scrum"></li>
+                                <li data-translate="skills_methodologies_kanban"></li>
+                                <li data-translate="skills_methodologies_tdd"></li>
+                                <li data-translate="skills_methodologies_ci_cd"></li>
+                                <li data-translate="skills_methodologies_git">Git / GitHub</li>
                             </ul>
                         </div>
                     </div>
@@ -289,12 +277,13 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card h-100 shadow-sm">
                         <div class="card-body">
-                            <h4 class="card-title text-primary">Aptitudes Adicionales</h4>
+                            <h4 class="card-title text-primary" data-translate="skills_additional_title"></h4>
                             <ul class="list-unstyled mb-0">
-                                <li>Proactividad y autonomía en entornos remotos</li>
-                                <li>Enfoque en resultados y mejora continua</li>
-                                <li>Capacidad de análisis y resolución de problemas técnicos complejos</li>
-                                <li>Colaboración y comunicación efectiva en equipos distribuidos</li>
+                                <li data-translate="skills_additional_agile"></li>
+                                <li data-translate="skills_additional_communication"></li>
+                                <li data-translate="skills_additional_leadership"></li>
+                                <li data-translate="skills_additional_documentation"></li>
+                                <li data-translate="skills_additional_mentoring"></li>
                             </ul>
                         </div>
                     </div>
@@ -302,10 +291,10 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card h-100 shadow-sm">
                         <div class="card-body">
-                            <h4 class="card-title text-primary">Idiomas</h4>
+                            <h4 class="card-title text-primary" data-translate="skills_languages_title"></h4>
                             <ul class="list-unstyled mb-0">
-                                <li>Español: Nativo</li>
-                                <li>Inglés: Intermedio (lectura y comprensión técnica avanzada)</li>
+                                <li><span data-translate="skills_language_spanish"></span> (<span data-translate="skills_language_level_native"></span>)</li>
+                                <li><span data-translate="skills_language_english"></span> (<span data-translate="skills_language_level_advanced"></span>)</li>
                             </ul>
                         </div>
                     </div>
@@ -313,11 +302,13 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card h-100 shadow-sm">
                         <div class="card-body">
-                            <h4 class="card-title text-primary">Intereses</h4>
+                            <h4 class="card-title text-primary" data-translate="skills_interests_title"></h4>
                             <ul class="list-unstyled mb-0">
-                                <li>Desarrollo de proyectos personales en web, automatización y e-learning</li>
-                                <li>Aprendizaje continuo de nuevas tecnologías</li>
-                                <li>Estilo de vida saludable y fitness</li>
+                                <li data-translate="skills_interests_tech"></li>
+                                <li data-translate="skills_interests_learning"></li>
+                                <li data-translate="skills_interests_innovation"></li>
+                                <li data-translate="skills_interests_problem_solving"></li>
+                                <li data-translate="skills_interests_collaboration"></li>
                             </ul>
                         </div>
                     </div>
@@ -328,101 +319,60 @@
 
     <section id="contacto" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-3">Contáctame</h2>
+            <h2 class="text-center mb-3" data-translate="contact_title"></h2>
 
             <div class="row">
                 <div class="col-lg-6 mx-auto">
-                    <p class="text-center mb-4">
-                        ¿Tienes un proyecto en mente o quieres saber más sobre mi trabajo? ¡No dudes en contactarme!
-                    </p>
-                  
-                    <form id="contactForm" onsubmit="return handleSubmit(event)">
-                        <!-- Especifica la dirección de email de respuesta (el email del remitente) -->
-                        <input type="hidden" name="_replyto" id="replyToEmail" />
-                        <!-- Desactiva reCAPTCHA de Google -->
-                        <input type="hidden" name="_captcha" value="false" />
-                        <!-- Honeypot para bots -->
-                        <input type="hidden" name="_honey" style="display:none" />
-
-                        <!-- Campo oculto para el asunto, será establecido por JavaScript -->
-                        <input type="hidden" name="_subject" />
-
+                    <p class="text-center mb-4" data-translate="contact_intro"></p>
+                    <form onsubmit="return handleSubmit(event)">
                         <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" id="nombre" name="name" class="form-control" required>
+                            <label for="nombre" class="form-label" data-translate="contact_name_label"></label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
+                            <label for="email" class="form-label" data-translate="contact_email_label"></label>
+                            <input type="email" class="form-control" id="email" name="_replyto" required>
+                            <input type="hidden" name="replyToEmail" id="replyToEmail">
                         </div>
                         <div class="mb-3">
-                            <label for="mensaje" class="form-label">Mensaje</label>
-                            <textarea id="mensaje" name="message" class="form-control" rows="5" required></textarea>
+                            <label for="asunto" class="form-label" data-translate="contact_subject_label"></label>
+                            <input type="text" class="form-control" id="asunto" name="_subject" required>
                         </div>
-                        <div class="d-grid">
-                            <button type="submit" class="btn btn-primary btn-lg">
-                                Enviar Mensaje
-                            </button>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label" data-translate="contact_message_label"></label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
                         </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg" data-translate="contact_send_message"></button>
+                        </div>
+                        <div id="successMessage" class="alert alert-success mt-3" style="display: none;"></div>
+                        <div id="errorMessage" class="alert alert-danger mt-3" style="display: none;"></div>
                     </form>
-
-                    <!-- Mensaje de éxito (inicialmente oculto) -->
-                    <div id="successMessage" class="alert alert-success mt-3" style="display: none;">
-                        ¡Mensaje enviado con éxito! Te responderé lo antes posible.
-                    </div>
-
-                    <!-- Mensaje de error (inicialmente oculto) -->
-                    <div id="errorMessage" class="alert alert-danger mt-3" style="display: none;">
-                        Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.
-                    </div>
-
                 </div>
             </div>
-
-            <div class="row mt-3">
-                <div class="col-lg-8 mx-auto text-center">
-
-                    <ul class="list-inline social-icons">
-                        <li class="list-inline-item">
-                            <a href="https://www.linkedin.com/in/roxcasmol" target="_blank"
-                                class="text-decoration-none fs-3 mx-2">
-                                <i class="fab fa-linkedin"></i> <!-- Icono de LinkedIn -->
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://github.com/roxcasmol" target="_blank"
-                                class="text-decoration-none fs-3 mx-2">
-                                <i class="fab fa-github"></i> <!-- Icono de GitHub -->
-                            </a>
-                        </li>
-                        <!-- Añade más iconos de redes sociales si tienes, como Twitter, Behance, etc. -->
-                    </ul>
-                    <p class="mt-4"><strong>Email:</strong> rox.cas.mol@gmail.com</p>
-                    <p><strong>Teléfono:</strong> +1 239 737 7289</p>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <footer>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/12397377289" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 mt-5">
         <div class="container">
-            <div class="copyright">
-                &copy; 2025 <strong><span>Roxana Castillo</span></strong>. Todos los derechos reservados
+            <p>&copy; 2024 Roxana Castillo. <span data-translate="footer_copyright"></span></p>
+            <div class="social-icons mt-3">
+                <a href="https://github.com/roxcasmol" target="_blank" class="text-white mx-2"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/roxcasmol" target="_blank" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+              
             </div>
         </div>
     </footer>
 
-    <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/12397377289?text=Hola%20Roxana%2C%20estoy%20interesado%20en%20tu%20trabajo.%20Me%20gustaría%20saber%20más."
-        class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-        crossorigin="anonymous"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/translation.js"></script>
     <script src="js/main.js"></script>
 </body>
 

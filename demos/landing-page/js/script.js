@@ -5,6 +5,37 @@ document.addEventListener('DOMContentLoaded', function() {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     });
 
+    // Inicializar el dropdown de idioma
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    
+    if (dropdownToggle && dropdownMenu) {
+        const popperInstance = Popper.createPopper(dropdownToggle, dropdownMenu, {
+            placement: 'bottom-end',
+            modifiers: [
+                {
+                    name: 'offset',
+                    options: {
+                        offset: [0, 8],
+                    },
+                },
+            ],
+        });
+
+        dropdownToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            dropdownMenu.classList.toggle('show');
+            popperInstance.update();
+        });
+
+        // Cerrar el dropdown al hacer clic fuera
+        document.addEventListener('click', function(e) {
+            if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    }
+
     // Manejar el scroll del navbar
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
