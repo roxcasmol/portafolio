@@ -40,7 +40,7 @@
 }
 
 #home p.lead {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-bottom: 40px;
     font-weight: 300;
 }
@@ -87,6 +87,10 @@
 #sobre-mi ul.info-list li a:hover {
     color: var(--primary-color);
     text-decoration: underline;
+}
+
+#sobre-mi .info-list p {    
+    margin: 0;
 }
 
 /* Sección Proyectos */
@@ -324,12 +328,13 @@
 
 /* Media Queries para Responsividad */
 @media (max-width: 992px) {
-    #home h1 {
-        font-size: 3rem;
+
+    #home {
+       min-height: 70vh;
     }
 
-    #home p.lead {
-        font-size: 1.4rem;
+    #home h1 {
+        font-size: 2rem;
     }
 
     section {
@@ -341,18 +346,25 @@
     }
 
     #casos h4 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+
+    #sobre-mi .info-list i,#sobre-mi .info-list strong, #sobre-mi .info-list p,  #sobre-mi .info-list a  {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        margin: 0;
     }
 }
 
 @media (max-width: 768px) {
     #home h1 {
         font-size: 2.5rem;
-    }
-
-    #home p.lead {
-        font-size: 1.2rem;
-    }
+    }  
 
     .btn-light,
     .btn-outline-light {
@@ -371,15 +383,11 @@
 @media (max-width: 576px) {
     #home h1 {
         font-size: 2rem;
-    }
-
-    #home p.lead {
-        font-size: 1.1rem;
-    }
+    }  
 
     .btn-light,
     .btn-outline-light {
-        padding: 8px 20px;
+        margin: 8px 20px;
     }
 
     #proyectos .card-title {
