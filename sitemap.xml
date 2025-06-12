@@ -1,35 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Página Principal -->
   <url>
     <loc>https://roxcasmol.github.io/portafolio/</loc>
     <lastmod>2024-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Secciones Principales -->
   <url>
     <loc>https://roxcasmol.github.io/portafolio/pages/cv.html</loc>
     <lastmod>2024-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://roxcasmol.github.io/portafolio/#sobre-mi</loc>
-    <lastmod>2024-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://roxcasmol.github.io/portafolio/#habilidades</loc>
-    <lastmod>2024-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Todos los Demos -->
   <url>
     <loc>https://roxcasmol.github.io/portafolio/demos/landing-page/</loc>
     <lastmod>2024-06-05</lastmod>
@@ -48,6 +30,5 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <!-- Agrega aquí cualquier demo adicional -->
-
+  <!-- Agrega aquí otros demos reales -->
 </urlset>
