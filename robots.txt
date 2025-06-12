@@ -1,3 +1,20 @@
 User-agent: *
 Allow: /
-Sitemap: https://roxcasmol.github.io/portafolio/sitemap.xml <!-- URL de tu portafolio en GitHub Pages -->
+Allow: /assets/
+Allow: /demos/
+Allow: /pages/
+
+# Sitemap
+Sitemap: https://roxcasmol.github.io/portafolio/sitemap.xml
+
+# Optimización para Google
+User-agent: Googlebot
+Allow: /
+
+# Optimización para imágenes
+User-agent: Googlebot-Image
+Allow: /assets/img/
+
+# Optimización para archivos
+User-agent: Googlebot-Mobile
+Allow: /

@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Página Principal -->
     <url>
-    <loc>https://roxcasmol.github.io/portafolio/</loc> <!-- URL de tu portafolio en GitHub Pages -->
-    <lastmod>2024-07-29</lastmod> <!-- Actualiza con la fecha de la última modificación -->
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+        <loc>https://roxcasmol.github.io/portafolio/</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Páginas Principales -->
+    <url>
+        <loc>https://roxcasmol.github.io/portafolio/pages/cv.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Demos -->
+    <url>
+        <loc>https://roxcasmol.github.io/portafolio/demos/landing-page/index.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://roxcasmol.github.io/portafolio/demos/blog-video-game/index.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://roxcasmol.github.io/portafolio/demos/heladeria/index.html</loc>
+        <lastmod>2024-03-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
 </urlset>
