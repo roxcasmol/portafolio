@@ -1,20 +1,16 @@
 User-agent: *
 Allow: /
-Allow: /assets/
-Allow: /demos/
-Allow: /pages/
 
-# Sitemap
+# Sitemap para facilitar el rastreo
 Sitemap: https://roxcasmol.github.io/portafolio/sitemap.xml
 
-# Optimización para Google
-User-agent: Googlebot
-Allow: /
+# Bloquear ubicación de pruebas o parámetros internos (ejemplo)
+# Disallow: /?s=*
+# Disallow: /test/
 
-# Optimización para imágenes
-User-agent: Googlebot-Image
-Allow: /assets/img/
+# (Opcional) Impedir que los AI crawlers usen tu contenido
+User-agent: GPTBot
+Disallow: /
 
-# Optimización para archivos
-User-agent: Googlebot-Mobile
-Allow: /
+User-agent: OpenAI
+Disallow: /
